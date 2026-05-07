@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2022 世界杯 · 加密交易所官方活动</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #0f1117; color: #e2e8f0; padding: 32px 24px; min-height: 100vh; max-width: 1400px; margin: 0 auto; }
+  h1 { font-size: 22px; font-weight: 700; color: #f8fafc; margin-bottom: 4px; }
+  .subtitle { font-size: 13px; color: #64748b; margin-bottom: 32px; }
+
+  /* Tab nav */
+  .tabs { display: flex; gap: 4px; margin-bottom: 28px; border-bottom: 1px solid #2d3148; padding-bottom: 0; }
+  .tab { font-size: 13px; font-weight: 500; color: #64748b; padding: 8px 16px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all 0.15s; white-space: nowrap; }
+  .tab:hover { color: #94a3b8; }
+  .tab.active { color: #818cf8; border-bottom-color: #818cf8; }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* Cards grid */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 20px; }
+  .card { background: #1a1d27; border: 1px solid #2d3148; border-radius: 12px; overflow: hidden; }
+  .card-header { padding: 16px 20px 12px; border-bottom: 1px solid #2d3148; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 99px; letter-spacing: 0.5px; flex-shrink: 0; }
+  .badge-sponsor  { background: #1a3a2a; color: #4ade80; }
+  .badge-messi    { background: #3a2a1a; color: #fb923c; }
+  .badge-na       { background: #2a2a2a; color: #6b7280; }
+  .badge-predict  { background: #1a2a3a; color: #38bdf8; }
+  .badge-trade    { background: #2a1a3a; color: #c084fc; }
+  .badge-fantoken { background: #3a3a1a; color: #facc15; }
+  .badge-marketing{ background: #1a3a3a; color: #2dd4bf; }
+  .exchange-name { font-size: 16px; font-weight: 700; color: #f1f5f9; }
+  .prize { font-size: 12px; color: #94a3b8; margin-left: auto; white-space: nowrap; }
+  .campaign-list { padding: 4px 0; }
+  .campaign-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px 20px; border-bottom: 1px solid #1e2235; transition: background 0.15s; }
+  .campaign-item:last-child { border-bottom: none; }
+  .campaign-item:hover { background: #21253a; }
+  .campaign-icon { margin-top: 2px; font-size: 13px; flex-shrink: 0; }
+  .campaign-body { flex: 1; min-width: 0; }
+  .campaign-link { font-size: 13px; color: #818cf8; text-decoration: none; line-height: 1.45; display: block; }
+  .campaign-link:hover { color: #a5b4fc; text-decoration: underline; }
+  .campaign-desc { font-size: 12px; color: #64748b; margin-top: 4px; line-height: 1.5; }
+  .highlight { color: #fbbf24; font-weight: 600; }
+  .no-data { padding: 20px; font-size: 13px; color: #4b5563; font-style: italic; line-height: 1.7; }
+
+  /* Mechanics section */
+  .mechanics { display: flex; flex-direction: column; gap: 24px; }
+  .mech-section { background: #1a1d27; border: 1px solid #2d3148; border-radius: 12px; overflow: hidden; }
+  .mech-header { padding: 14px 20px; border-bottom: 1px solid #2d3148; display: flex; align-items: center; gap: 10px; }
+  .mech-title { font-size: 15px; font-weight: 700; color: #f1f5f9; }
+  .mech-sub { font-size: 12px; color: #64748b; margin-left: auto; }
+  .mech-body { padding: 16px 20px; display: flex; flex-direction: column; gap: 20px; }
+  .mech-item { border: 1px solid #252840; border-radius: 8px; overflow: hidden; }
+  .mech-item-header { background: #1e2235; padding: 10px 14px; display: flex; align-items: center; gap: 8px; }
+  .mech-item-title { font-size: 13px; font-weight: 600; color: #e2e8f0; }
+  .mech-item-body { padding: 12px 14px; font-size: 13px; line-height: 1.7; color: #94a3b8; }
+  .mech-item-body b { color: #e2e8f0; }
+  .mech-item-body .warn { color: #f87171; }
+  .mech-item-body .good { color: #4ade80; }
+  .flow { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin: 8px 0; }
+  .flow-step { background: #252840; border-radius: 6px; padding: 3px 10px; font-size: 12px; color: #c4b5fd; }
+  .flow-arrow { color: #4b5563; font-size: 12px; }
+  .roi-box { background: #0f1a0f; border: 1px solid #1a3a1a; border-radius: 6px; padding: 8px 12px; margin-top: 8px; font-size: 12px; color: #86efac; }
+  .roi-box .label { color: #4ade80; font-weight: 600; margin-right: 6px; }
+  .note-box { background: #1a1a0f; border: 1px solid #3a3a1a; border-radius: 6px; padding: 8px 12px; margin-top: 8px; font-size: 12px; color: #fde68a; }
+  .summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-top: 4px; }
+  .summary-card { background: #1e2235; border-radius: 8px; padding: 12px 14px; }
+  .summary-card .s-title { font-size: 12px; font-weight: 600; color: #94a3b8; margin-bottom: 6px; }
+  .summary-card .s-body { font-size: 13px; color: #e2e8f0; line-height: 1.6; }
+
+  footer { margin-top: 32px; font-size: 11px; color: #374151; }
+</style>
+</head>
+<body>
+
+<h1>2022 世界杯 · 加密交易所官方活动</h1>
+<p class="subtitle">2022年11月–12月 · 仅收录官方域名公告/落地页</p>
+
+<div class="tabs">
+  <div class="tab active" onclick="switchTab('campaigns')">活动列表</div>
+  <div class="tab" onclick="switchTab('mechanics')">玩法分析</div>
+</div>
+
+<!-- Tab 1: 活动列表 -->
+<div class="tab-panel active" id="tab-campaigns">
+<div class="grid">
+
+  <!-- Binance -->
+  <div class="card">
+    <div class="card-header">
+      <span class="exchange-name">Binance</span>
+      <span class="badge badge-sponsor">FIFA 官方赞助商</span>
+      <span class="prize">$1,000,000+</span>
+    </div>
+    <div class="campaign-list">
+      <div class="campaign-item">
+        <span class="campaign-icon">🏆</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.binance.com/en/support/announcement/binance-football-fever-2022-share-over-1-000-000-worth-of-rewards-7d8a6e585600493e97d085f0116a36c2" target="_blank">Football Fever 2022: Share Over $1,000,000 Worth of Rewards</a>
+          <div class="campaign-desc">主活动：NFT Passport 签到 + Daily Challenges 积分 + 排行榜瓜分奖励 · <span class="badge badge-marketing" style="font-size:10px;padding:1px 6px;">参与型</span></div>
+        </div>
+      </div>
+      <div class="campaign-item">
+        <span class="campaign-icon">📈</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.binance.com/en/support/announcement/footballusdt-trading-challenge-share-up-to-10-000-busd-50-limited-edition-nfts-in-rewards-b1b17fc6e1b94466b8e3ff4216ae3c4e" target="_blank">FOOTBALLUSDT Trading Challenge: Share Up to 10,000 BUSD & 50 Limited Edition NFTs</a>
+          <div class="campaign-desc">交易指定币对，按交易量排名瓜分奖励 · <span class="badge badge-trade" style="font-size:10px;padding:1px 6px;">交易竞赛</span></div>
+        </div>
+      </div>
+      <div class="campaign-item">
+        <span class="campaign-icon">💰</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.binance.com/en/support/announcement/binance-simple-earn-flexible-products-exclusive-promotions-on-binance-fan-tokens-in-celebrating-the-biggest-football-event-of-the-year-45970459872444b7830fd59e81e2e06c" target="_blank">Simple Earn: Fan Token 专属促销（6% APR）</a>
+          <div class="campaign-desc">存入 ALPINE / LAZIO / PORTO / SANTOS Fan Token 享 6% APR · <span class="badge badge-fantoken" style="font-size:10px;padding:1px 6px;">Fan Token</span></div>
+        </div>
+      </div>
+      <div class="campaign-item">
+        <span class="campaign-icon">🎁</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.binance.com/en/support/announcement/send-binance-football-fever-2022-gift-cards-share-10-000-busd-in-gift-card-rewards-8a9763edeb1f4ece8363a083ff23d538" target="_blank">Football Fever Gift Cards: Share 10,000 BUSD in Rewards</a>
+          <div class="campaign-desc">赠送世界杯主题礼品卡支持球队 · <span class="badge badge-marketing" style="font-size:10px;padding:1px 6px;">参与型</span></div>
+        </div>
+      </div>
+      <div class="campaign-item">
+        <span class="campaign-icon">📦</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.binance.com/en/support/announcement/join-the-football-fever-gift-card-mystery-box-promotion-and-share-3-000-busd-in-rewards-ac4c7803e57f45ae91789f2b8fd60a48" target="_blank">Gift Card Mystery Box Promotion: Share 3,000 BUSD</a>
+          <div class="campaign-desc">礼品卡盲盒促销 · <span class="badge badge-marketing" style="font-size:10px;padding:1px 6px;">参与型</span></div>
+        </div>
+      </div>
+      <div class="campaign-item">
+        <span class="campaign-icon">🏦</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.binance.com/en/support/announcement/fan-token-fever-enjoy-20-off-interest-rates-when-borrowing-selected-fan-tokens-stand-a-chance-to-get-a-1-000-busd-flexible-trial-fund-voucher-a02b3332cba344309b5f231fa967c6cf" target="_blank">Fan Token Fever: 20% Off Interest Rates on Fan Token Borrowing</a>
+          <div class="campaign-desc">借贷指定 Fan Token 享 8折利率 · <span class="badge badge-fantoken" style="font-size:10px;padding:1px 6px;">Fan Token</span></div>
+        </div>
+      </div>
+      <div class="campaign-item">
+        <span class="campaign-icon">👥</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.binance.com/en/support/announcement/invite-your-friends-to-join-binance-football-fever-win-up-to-50-worth-of-reward-5ce71523baf544a2a669a632d28f9a72" target="_blank">Invite Friends to Football Fever: Win Up to $50（决赛阶段）</a>
+          <div class="campaign-desc">邀请好友参与活动获奖励 · <span class="badge badge-marketing" style="font-size:10px;padding:1px 6px;">参与型</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bybit -->
+  <div class="card">
+    <div class="card-header">
+      <span class="exchange-name">Bybit</span>
+      <span class="prize">500,000 USDT</span>
+    </div>
+    <div class="campaign-list">
+      <div class="campaign-item">
+        <span class="campaign-icon">🔮</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://announcements.bybit.com/en/article/crypto-cup-kickoff-predict-your-world-cup-winner-to-share-the-500-000-usdt-prize-pool--blt65a2598b3b61d323/" target="_blank">Crypto Cup Kickoff: Predict Your World Cup Winner to Share 500,000 USDT</a>
+          <div class="campaign-desc">交易获 Ticket → 用 Ticket 预测各阶段胜队 → 按积分瓜分奖池 · <span class="badge badge-predict" style="font-size:10px;padding:1px 6px;">竞猜型</span> <span class="badge badge-trade" style="font-size:10px;padding:1px 6px;">+交易</span></div>
+        </div>
+      </div>
+      <div class="campaign-item">
+        <span class="campaign-icon">🖼️</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://announcements.bybit.com/en/article/cop-limited-edition-grabpic-cup-nfts-up-to-500-000-usdt-prize-pool-awaits-blt9e759413c433d079/" target="_blank">Limited Edition GrabPic Cup NFTs! Up to 500,000 USDT Prize Pool Awaits</a>
+          <div class="campaign-desc">联名 GrabPic 足球主题限量 NFT · <span class="badge badge-marketing" style="font-size:10px;padding:1px 6px;">NFT</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KuCoin -->
+  <div class="card">
+    <div class="card-header">
+      <span class="exchange-name">KuCoin</span>
+      <span class="prize">$1,050,000</span>
+    </div>
+    <div class="campaign-list">
+      <div class="campaign-item">
+        <span class="campaign-icon">🎉</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.kucoin.com/announcement/world-cup-carnival-%241000000-prize-pool-and-free-world-cup-themed-nfts" target="_blank">World Cup Carnival: $1,000,000 Prize Pool + Free World Cup-Themed NFTs</a>
+          <div class="campaign-desc">交易指定币对积累贡献量，达里程碑解锁更多奖池，联合 Polygon × MangaFall 发 NFT · <span class="badge badge-trade" style="font-size:10px;padding:1px 6px;">交易竞赛</span></div>
+        </div>
+      </div>
+      <div class="campaign-item">
+        <span class="campaign-icon">🔮</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.kucoin.com/announcement/fifa-world-cup-2022-winner-predictions-30000-up-for-grabs" target="_blank">FIFA World Cup 2022 Winner Predictions — $30,000 Up For Grabs</a>
+          <div class="campaign-desc">小组赛阶段冠军预测，KuCoin Wallet 联办 · <span class="badge badge-predict" style="font-size:10px;padding:1px 6px;">竞猜型</span></div>
+        </div>
+      </div>
+      <div class="campaign-item">
+        <span class="campaign-icon">⚔️</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.kucoin.com/announcement/fifa-world-cup-2022-winner-predictions-win-a-share-of-20000-in-knockout-stage-1" target="_blank">FIFA World Cup 2022 Winner Predictions: Win a Share of $20,000 in Knockout Stage</a>
+          <div class="campaign-desc">淘汰赛阶段续集，给猜错小组赛的用户补救机会 · <span class="badge badge-predict" style="font-size:10px;padding:1px 6px;">竞猜型</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bitget -->
+  <div class="card">
+    <div class="card-header">
+      <span class="exchange-name">Bitget</span>
+      <span class="badge badge-messi">梅西代言</span>
+      <span class="prize">$2,000,000+</span>
+    </div>
+    <div class="campaign-list">
+      <div class="campaign-item">
+        <span class="campaign-icon">⚽</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.bitget.com/blog/articles/bitget-launches-major-campaign-with-messi-to-reignite-confidence-in-th-crypto-market" target="_blank">Bitget × Messi "Make it Count" — $2,000万代言营销活动</a>
+          <div class="campaign-desc">两阶段活动：BGB 代币奖励 + 梅西签名球衣抽奖 · <span class="badge badge-marketing" style="font-size:10px;padding:1px 6px;">品牌营销</span></div>
+        </div>
+      </div>
+      <div class="campaign-item">
+        <span class="campaign-icon">📈</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.bitget.com/blog/articles/bitget-kcgi-2022-football-edition-celebrates-the-world-cup-with-record-breaking-participation" target="_blank">KCGI 2022: Football Edition — 世界杯主题合约交易竞赛</a>
+          <div class="campaign-desc">32,174 参与者，奖池 565,000+ USDT，11/21–12/19 · <span class="badge badge-trade" style="font-size:10px;padding:1px 6px;">交易竞赛</span></div>
+        </div>
+      </div>
+      <div class="campaign-item">
+        <span class="campaign-icon">🪂</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.bitget.com/blog/articles/bitget-airdrops-seed-nft-with-usd-2m-rewards-to-ftt-holders-during-world-cup" target="_blank">Seed NFT Airdrop with $2M Rewards to FTT Holders During World Cup</a>
+          <div class="campaign-desc">向 FTX 受害者（FTT持有者）空投 NFT，世界杯期间维稳市场信心 · <span class="badge badge-marketing" style="font-size:10px;padding:1px 6px;">空投</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Huobi / HTX -->
+  <div class="card">
+    <div class="card-header">
+      <span class="exchange-name">Huobi / HTX</span>
+      <span class="prize">1,000,000 USDT</span>
+    </div>
+    <div class="campaign-list">
+      <div class="campaign-item">
+        <span class="campaign-icon">🔮</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.htx.com/support/74922489481436" target="_blank">Soccer Cup Prediction: Support Your Team and Win Grand Prizes</a>
+          <div class="campaign-desc">用 Oracle Bean 预测每场比赛结果，猜对获奖 · <span class="badge badge-predict" style="font-size:10px;padding:1px 6px;">竞猜型</span></div>
+        </div>
+      </div>
+      <div class="campaign-item">
+        <span class="campaign-icon">💸</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.htx.com/support/64921795878759" target="_blank">Soccer Fan Super Week: Fan Token Team Competition, 100% Trading Fee Cashback</a>
+          <div class="campaign-desc">持有/交易球队 Fan Token，该队表现与 100% 手续费返佣挂钩 · <span class="badge badge-fantoken" style="font-size:10px;padding:1px 6px;">Fan Token</span></div>
+        </div>
+      </div>
+      <div class="campaign-item">
+        <span class="campaign-icon">👥</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.htx.com/support/94922995186381" target="_blank">Invite Friends to Grab Soccer Cup Rewards</a>
+          <div class="campaign-desc">邀请好友获 CandyDrop 优惠券 + USDT · <span class="badge badge-marketing" style="font-size:10px;padding:1px 6px;">邀请</span></div>
+        </div>
+      </div>
+      <div class="campaign-item">
+        <span class="campaign-icon">📦</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.htx.com/support/104923415225302" target="_blank">PrimeBox × CryptoSoccer: Share 1,000,000 USDT Prize Pool</a>
+          <div class="campaign-desc">足球主题盲盒，奖池 1,000,000 USDT · <span class="badge badge-marketing" style="font-size:10px;padding:1px 6px;">盲盒</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gate.io -->
+  <div class="card">
+    <div class="card-header">
+      <span class="exchange-name">Gate.io</span>
+      <span class="prize">$770,000</span>
+    </div>
+    <div class="campaign-list">
+      <div class="campaign-item">
+        <span class="campaign-icon">🔮</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.gate.com/zh/announcements/article/28707" target="_blank">为世界杯喝彩，参与比赛竞猜，瓜分 $770,000 大奖</a>
+          <div class="campaign-desc">用 Gateball 代币押每场胜队/比分，猜对按投入比例瓜分奖池，覆盖全部赛程 · <span class="badge badge-predict" style="font-size:10px;padding:1px 6px;">竞猜型</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEXC -->
+  <div class="card">
+    <div class="card-header">
+      <span class="exchange-name">MEXC</span>
+      <span class="prize">100 BTC</span>
+    </div>
+    <div class="campaign-list">
+      <div class="campaign-item">
+        <span class="campaign-icon">📈</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.mexc.com/announcements/article/mexc-world-cup-2022-futures-trading-competition-2022-wcfc-with-100-btc-total-prize-pool-and-daily-issued-rewards-12751693655449" target="_blank">MEXC World Cup 2022 Futures Trading Competition (2022 WCFC) — 100 BTC Prize Pool</a>
+          <div class="campaign-desc">期货交易竞赛，PNL 排名 + 日成交量排名 + 每日转盘，2022/12/1–12/18 · <span class="badge badge-trade" style="font-size:10px;padding:1px 6px;">交易竞赛</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OKX / Coinbase / Kraken -->
+  <div class="card">
+    <div class="card-header">
+      <span class="exchange-name">OKX / Coinbase / Kraken</span>
+      <span class="badge badge-na">无有效链接</span>
+    </div>
+    <div class="campaign-list">
+      <div class="no-data">
+        <b>OKX</b>：有世界杯活动，但官方页面已删除，Wayback Machine 无存档，无法提供链接。<br><br>
+        <b>Coinbase</b>：未举办世界杯相关活动，2022年大型营销在 2月 Super Bowl。<br><br>
+        <b>Kraken</b>：未找到任何世界杯相关官方活动。
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- Tab 2: 玩法分析 -->
+<div class="tab-panel" id="tab-mechanics">
+<div class="mechanics">
+
+  <!-- 玩法一：预测/竞猜型 -->
+  <div class="mech-section">
+    <div class="mech-header">
+      <span class="badge badge-predict" style="font-size:12px;padding:3px 10px;">竞猜型</span>
+      <span class="mech-title">预测/竞猜型 — 直接与比赛结果挂钩</span>
+      <span class="mech-sub">Gate.io · KuCoin · Huobi · Bybit</span>
+    </div>
+    <div class="mech-body">
+
+      <div class="mech-item">
+        <div class="mech-item-header">
+          <span style="font-size:14px;">🔮</span>
+          <span class="mech-item-title">Gate.io — Gateball 竞猜（$770,000 奖池）</span>
+        </div>
+        <div class="mech-item-body">
+          <div class="flow">
+            <span class="flow-step">持有 Gateball 代币</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">对每场比赛押胜队/比分</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">猜对者按投入比例瓜分奖池</span>
+          </div>
+          <b>投入：</b>Gateball 代币（押注权重）<br>
+          <b>奖励：</b>猜对后，按本场押注量 ÷ 全部猜对者总押注量 × 奖池<br>
+          <div class="roi-box"><span class="label">产出逻辑</span>猜热门队：竞争者多，被摊薄；猜冷门：猜对人少，倍率高。无法精算，取决于同场参与量。</div>
+          <div class="note-box">⚡ 每场独立结算，覆盖全部赛程（共 64 场），持续参与机会最多</div>
+        </div>
+      </div>
+
+      <div class="mech-item">
+        <div class="mech-item-header">
+          <span style="font-size:14px;">🔮</span>
+          <span class="mech-item-title">KuCoin — 两轮冠军预测（$50,000 合计）</span>
+        </div>
+        <div class="mech-item-body">
+          <div class="flow">
+            <span class="flow-step">第一轮：小组赛阶段选冠军（$30,000）</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">第二轮：淘汰赛阶段再选（$20,000）</span>
+          </div>
+          <b>投入：</b>持有 KuCoin Wallet（低门槛，无资金押注）<br>
+          <b>奖励：</b>选对最终冠军后瓜分对应阶段奖池<br>
+          <div class="note-box">⚡ 两轮独立设计，小组赛猜错还有淘汰赛补救机会，降低挫败感，拉长参与周期</div>
+        </div>
+      </div>
+
+      <div class="mech-item">
+        <div class="mech-item-header">
+          <span style="font-size:14px;">🔮</span>
+          <span class="mech-item-title">Huobi — Oracle Bean 竞猜</span>
+        </div>
+        <div class="mech-item-body">
+          <div class="flow">
+            <span class="flow-step">持有 Oracle Bean（平台积分）</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">预测每场比赛结果</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">猜对获奖</span>
+          </div>
+          <b>投入：</b>Oracle Bean（平台内部资源，无真实资金风险）<br>
+          <b>奖励：</b>具体奖池规模未公开披露<br>
+          <div class="roi-box"><span class="label">特点</span>门槛最低，无需投入真实资金，适合拉新用户参与</div>
+        </div>
+      </div>
+
+      <div class="mech-item">
+        <div class="mech-item-header">
+          <span style="font-size:14px;">🔮</span>
+          <span class="mech-item-title">Bybit — Crypto Cup Kickoff（500,000 USDT）⭐ 设计最复杂</span>
+        </div>
+        <div class="mech-item-body">
+          <div class="flow">
+            <span class="flow-step">交易衍生品合约</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">赚取 Crypto Cup Tickets</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">用 Ticket 预测各阶段胜队</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">猜对得 1 积分</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">按积分瓜分各阶段奖池</span>
+          </div>
+          <b>投入：</b>交易量（先交易才有竞猜资格）<br>
+          <b>奖励：</b>500,000 USDT + 1,000 NFTs，按赛程分阶段结算<br>
+          <div class="roi-box"><span class="label">产出逻辑</span>双重不确定性：①交易量 → Ticket 效率；②预测准确率。连续猜对多轮积分越高，头部用户占比越大。</div>
+          <div class="note-box">⭐ 最精巧的设计：把交易量（平台核心指标）和竞猜参与感深度绑定；奖励随赛程分散结算，用户需全程参与</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 玩法二：Fan Token 持仓型 -->
+  <div class="mech-section">
+    <div class="mech-header">
+      <span class="badge badge-fantoken" style="font-size:12px;padding:3px 10px;">Fan Token</span>
+      <span class="mech-title">持仓/站队型 — 持有球队 Fan Token，成绩影响收益</span>
+      <span class="mech-sub">Binance · Huobi</span>
+    </div>
+    <div class="mech-body">
+
+      <div class="mech-item">
+        <div class="mech-item-header">
+          <span style="font-size:14px;">🏅</span>
+          <span class="mech-item-title">Huobi — Soccer Fan Super Week（100% 手续费返佣）</span>
+        </div>
+        <div class="mech-item-body">
+          <div class="flow">
+            <span class="flow-step">买入/持有某球队 Fan Token</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">该队在世界杯表现好</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">享 100% 手续费返佣</span>
+          </div>
+          <b>投入：</b>Fan Token 本金（如 POR葡萄牙、ARG阿根廷等）<br>
+          <b>奖励：</b>100% 交易手续费返佣<br>
+          <div class="note-box" style="background:#1a0f0f;border-color:#3a1a1a;color:#fca5a5;">⚠️ Fan Token 风险：历史规律显示球队出局后 Token 价格急跌 20–50%，手续费返佣远不能覆盖本金风险</div>
+        </div>
+      </div>
+
+      <div class="mech-item">
+        <div class="mech-item-header">
+          <span style="font-size:14px;">💰</span>
+          <span class="mech-item-title">Binance — Simple Earn Fan Token 专属促销（6% APR）</span>
+        </div>
+        <div class="mech-item-body">
+          <div class="flow">
+            <span class="flow-step">存入 Fan Token（ALPINE/LAZIO/PORTO/SANTOS）</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">获得 6% 年化利率</span>
+          </div>
+          <b>投入：</b>Fan Token 本金（世界杯期间购入）<br>
+          <b>奖励：</b>6% APR（固定，与球队成绩无直接关系）<br>
+          <div class="roi-box"><span class="label">产出比</span>年化 6% 利率，但赛事期间 Fan Token 价格波动幅度通常达 20–50%，利率收益远不足覆盖本金风险</div>
+          <div class="note-box" style="background:#1a0f0f;border-color:#3a1a1a;color:#fca5a5;">⚠️ 收益率包装成"赛事主题"，实际是纯利率产品，本金风险由用户自担</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 玩法三：交易竞赛型 -->
+  <div class="mech-section">
+    <div class="mech-header">
+      <span class="badge badge-trade" style="font-size:12px;padding:3px 10px;">交易竞赛</span>
+      <span class="mech-title">交易竞赛型 — 世界杯主题包装，与比赛结果无关</span>
+      <span class="mech-sub">MEXC · Bitget · KuCoin</span>
+    </div>
+    <div class="mech-body">
+      <div class="summary-grid">
+        <div class="summary-card">
+          <div class="s-title">MEXC — WCFC 期货交易大赛</div>
+          <div class="s-body">奖池最高 100 BTC（按参与人数阶梯解锁）<br>PNL 排名 + 日成交量排名 + 每日转盘抽奖<br>12/1–12/18</div>
+        </div>
+        <div class="summary-card">
+          <div class="s-title">Bitget — KCGI Football Edition</div>
+          <div class="s-body">全球合约交易竞赛，按收益率/PnL排名<br>奖池 565,000+ USDT，32,174 参与者<br>11/21–12/19，梅西球衣特别奖品</div>
+        </div>
+        <div class="summary-card">
+          <div class="s-title">KuCoin — World Cup Carnival</div>
+          <div class="s-body">按交易贡献量分层，里程碑解锁更大奖池<br>总奖池 $1,000,000 + 世界杯主题 NFT<br>Top 20 用户额外获球衣/球鞋实物奖品</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 玩法四：营销/参与型 -->
+  <div class="mech-section">
+    <div class="mech-header">
+      <span class="badge badge-marketing" style="font-size:12px;padding:3px 10px;">参与型</span>
+      <span class="mech-title">营销/参与型 — 无门槛，无需押注</span>
+      <span class="mech-sub">Binance · Bitget · Bybit</span>
+    </div>
+    <div class="mech-body">
+      <div class="summary-grid">
+        <div class="summary-card">
+          <div class="s-title">Binance — Football Fever 主活动</div>
+          <div class="s-body">NFT Passport 每日签到 + Daily Challenges 积分<br>排行榜瓜分 $1,000,000 奖励</div>
+        </div>
+        <div class="summary-card">
+          <div class="s-title">Binance — 邀请好友（决赛阶段）</div>
+          <div class="s-body">邀请好友参与 Football Fever<br>最高获 $50 奖励</div>
+        </div>
+        <div class="summary-card">
+          <div class="s-title">Bitget × Messi "Make it Count"</div>
+          <div class="s-body">两阶段活动：参与任务赢<br>梅西签名球衣 + BGB 代币奖励<br>$2,000万代言营销，加密市场信心重建</div>
+        </div>
+        <div class="summary-card">
+          <div class="s-title">Bybit × GrabPic — 限量足球 NFT</div>
+          <div class="s-body">联名 GrabPic 限量版 "Crypto Gamer Football" NFT<br>奖池最高 500,000 USDT</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 总结 -->
+  <div class="mech-section">
+    <div class="mech-header">
+      <span class="mech-title">总结：各玩法横向对比</span>
+    </div>
+    <div class="mech-body">
+      <div style="font-size:13px;color:#94a3b8;line-height:1.9;">
+        <b style="color:#f1f5f9;">与赛果直接挂钩：</b>只有竞猜型（Gate.io、KuCoin、Huobi、Bybit）真正把"押对球队"和"获得奖励"直接连接，用户代入感最强。<br>
+        <b style="color:#f1f5f9;">设计最精巧：</b>Bybit 的"交易→Ticket→竞猜→积分"两步设计，把平台核心指标（交易量）和活动参与感深度绑定，是所有玩法中机制最复杂的。<br>
+        <b style="color:#f1f5f9;">Fan Token 风险：</b>Huobi 和 Binance 的 Fan Token 玩法虽然包装成"支持球队"，但 Token 本身价格剧烈波动，实际上球队赢了用户却可能亏钱，存在明显的反噬风险。<br>
+        <b style="color:#f1f5f9;">规模最大：</b>Binance（FIFA 官方赞助商）活动矩阵最完整，涵盖竞猜/交易/Fan Token/邀请/礼品卡五条产品线并联推进。
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<footer>数据来源：各交易所官方公告页 / 博客，调研时间 2026-05-06</footer>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
