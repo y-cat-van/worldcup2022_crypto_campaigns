@@ -3,20 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2022 世界杯 · 加密交易所官方活动</title>
+<title>FIFA 世界杯 · 加密交易所官方活动</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #0f1117; color: #e2e8f0; padding: 32px 24px; min-height: 100vh; max-width: 1400px; margin: 0 auto; }
   h1 { font-size: 22px; font-weight: 700; color: #f8fafc; margin-bottom: 4px; }
-  .subtitle { font-size: 13px; color: #64748b; margin-bottom: 32px; }
+  .subtitle { font-size: 13px; color: #64748b; margin-bottom: 24px; }
 
-  /* Tab nav */
+  /* 届次切换（大 Tab） */
+  .edition-tabs { display: flex; gap: 8px; margin-bottom: 24px; }
+  .edition-tab { font-size: 14px; font-weight: 700; padding: 7px 20px; border-radius: 8px; cursor: pointer; border: 1px solid #2d3148; color: #64748b; background: #1a1d27; transition: all 0.15s; }
+  .edition-tab:hover { color: #e2e8f0; border-color: #4b5563; }
+  .edition-tab.active { background: #818cf8; color: #fff; border-color: #818cf8; }
+  .edition-panel { display: none; }
+  .edition-panel.active { display: block; }
+
+  /* 内容 Tab nav */
   .tabs { display: flex; gap: 4px; margin-bottom: 28px; border-bottom: 1px solid #2d3148; padding-bottom: 0; }
   .tab { font-size: 13px; font-weight: 500; color: #64748b; padding: 8px 16px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all 0.15s; white-space: nowrap; }
   .tab:hover { color: #94a3b8; }
   .tab.active { color: #818cf8; border-bottom-color: #818cf8; }
   .tab-panel { display: none; }
   .tab-panel.active { display: block; }
+
+  /* 活动状态 badge */
+  .badge-live    { background: #1a3a2a; color: #4ade80; }
+  .badge-soon    { background: #2a2a1a; color: #fbbf24; }
+  .badge-ended   { background: #2a2a2a; color: #6b7280; }
 
   /* Cards grid */
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 20px; }
@@ -74,12 +87,21 @@
 </head>
 <body>
 
-<h1>2022 世界杯 · 加密交易所官方活动</h1>
-<p class="subtitle">2022年11月–12月 · 仅收录官方域名公告/落地页</p>
+<h1>FIFA 世界杯 · 加密交易所官方活动</h1>
+<p class="subtitle">仅收录官方域名公告/落地页</p>
+
+<!-- 届次切换 -->
+<div class="edition-tabs">
+  <div class="edition-tab active" onclick="switchEdition('2022', this)">⚽ 2022 卡塔尔</div>
+  <div class="edition-tab" onclick="switchEdition('2026', this)">⚽ 2026 北美</div>
+</div>
+
+<!-- ===== 2022 届 ===== -->
+<div class="edition-panel active" id="edition-2022">
 
 <div class="tabs">
-  <div class="tab active" onclick="switchTab('campaigns')">活动列表</div>
-  <div class="tab" onclick="switchTab('mechanics')">玩法分析</div>
+  <div class="tab active" onclick="switchTab('campaigns', this)">活动列表</div>
+  <div class="tab" onclick="switchTab('mechanics', this)">玩法分析</div>
 </div>
 
 <!-- Tab 1: 活动列表 -->
@@ -540,14 +562,114 @@
 </div>
 </div>
 
-<footer>数据来源：各交易所官方公告页 / 博客，调研时间 2026-05-06</footer>
+</div><!-- end edition-2022 -->
+
+<!-- ===== 2026 届 ===== -->
+<div class="edition-panel" id="edition-2026">
+
+<p style="font-size:12px;color:#64748b;margin-bottom:20px;">2026年6月11日开幕（美国/加拿大/墨西哥） · 数据截至 2026-05-07 · 状态：<span class="badge badge-live" style="font-size:10px;padding:1px 7px;">进行中</span> <span class="badge badge-soon" style="font-size:10px;padding:1px 7px;">预热中</span> <span class="badge badge-ended" style="font-size:10px;padding:1px 7px;">已结束</span></p>
+
+<div class="grid">
+
+  <!-- OKX -->
+  <div class="card">
+    <div class="card-header">
+      <span class="exchange-name">OKX</span>
+      <span class="badge badge-sponsor">FIFA 官方赞助商</span>
+      <span class="badge badge-ended">已结束</span>
+    </div>
+    <div class="campaign-list">
+      <div class="campaign-item">
+        <span class="campaign-icon">✈️</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.okx.com/campaigns/win-football-package" target="_blank">Trade to Win a VIP FIFA World Cup 2026 Experience</a>
+          <div class="campaign-desc">交易量达 3 亿 USDT 的前 4 名用户赢得世界杯 VIP 款待包（球票+住宿），其余参与者瓜分 USDT 加密奖励 · <span class="badge badge-trade" style="font-size:10px;padding:1px 6px;">交易竞赛</span><br>活动期：已结束（4月）</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bybit -->
+  <div class="card">
+    <div class="card-header">
+      <span class="exchange-name">Bybit</span>
+      <span class="badge badge-live">进行中</span>
+      <span class="prize">至 5/20</span>
+    </div>
+    <div class="campaign-list">
+      <div class="campaign-item">
+        <span class="campaign-icon">🎟️</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.bybit.com/en/promo/campaign/LATAM_WCPoints_Tether" target="_blank">Win your Spot at the World Cup 2026</a>
+          <div class="campaign-desc">完成任务赚积分，前排用户赢得世界杯门票 + 机票 + 住宿（仅限拉丁美洲地区） · <span class="badge badge-marketing" style="font-size:10px;padding:1px 6px;">参与型</span><br>活动期：3/30 – 5/20</div>
+        </div>
+      </div>
+      <div class="campaign-item">
+        <span class="campaign-icon">💰</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://www.bybit.com/en/promo/campaign/BienvenidaBybit" target="_blank">Join Bybit and get 10 USDT for free（含世界杯旅行大奖）</a>
+          <div class="campaign-desc">存款赢取迎新奖励，额外抽取世界杯球票 + 机票 + 住宿大奖（西语地区） · <span class="badge badge-marketing" style="font-size:10px;padding:1px 6px;">迎新活动</span><br>活动期：1/1 – 5/30</div>
+        </div>
+      </div>
+      <div class="campaign-item">
+        <span class="campaign-icon">📖</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://learn.bybit.com/en/bybit-guide/bybit-football-season-2026" target="_blank">Bybit Football Season 2026 — 活动体系指南</a>
+          <div class="campaign-desc">Bybit 2026 世界杯整体活动体系介绍（积分、预测、奖品机制），官方博客 · <span class="badge badge-marketing" style="font-size:10px;padding:1px 6px;">内容</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Crypto.com -->
+  <div class="card">
+    <div class="card-header">
+      <span class="exchange-name">Crypto.com</span>
+      <span class="badge badge-ended">已结束</span>
+    </div>
+    <div class="campaign-list">
+      <div class="campaign-item">
+        <span class="campaign-icon">✈️</span>
+        <div class="campaign-body">
+          <a class="campaign-link" href="https://crypto.com/en/events/fifa-dream-trip-2026" target="_blank">Score a FIFA World Cup 2026™ Dream Trip With Your Crypto.com Visa Debit Card</a>
+          <div class="campaign-desc">持卡用户完成申卡/消费 $500/订阅 Level Up 其一，抽取 4 组双人门票 + 五晚酒店 + 交通 + $750 礼品卡（仅限欧洲 & 澳洲） · <span class="badge badge-marketing" style="font-size:10px;padding:1px 6px;">持卡活动</span><br>活动期：4/16 – 5/10，已结束</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 无活动的交易所 -->
+  <div class="card">
+    <div class="card-header">
+      <span class="exchange-name">Binance / KuCoin / Gate.io / Bitget / HTX / MEXC</span>
+      <span class="badge badge-na">暂无活动</span>
+    </div>
+    <div class="campaign-list">
+      <div class="no-data">
+        以上平台截至 2026-05-07 均未发布 FIFA 2026 世界杯专项活动。<br><br>
+        Gate.io、KuCoin 有世界杯主题的内容文章（分析类），但无用户可参与的促销活动。距开幕约 35 天，多数平台预计在 6 月临近时才集中发布。
+      </div>
+    </div>
+  </div>
+
+</div>
+</div><!-- end edition-2026 -->
+
+<footer>数据来源：各交易所官方公告页 / 博客 · 2022届调研时间 2026-05-06 · 2026届持续更新</footer>
 
 <script>
-function switchTab(name) {
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  document.getElementById('tab-' + name).classList.add('active');
-  event.target.classList.add('active');
+function switchEdition(name, el) {
+  document.querySelectorAll('.edition-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.edition-panel').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('edition-' + name).classList.add('active');
+}
+function switchTab(name, el) {
+  const edition = el.closest('.edition-panel');
+  edition.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  edition.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  edition.querySelector('#tab-' + name).classList.add('active');
 }
 </script>
 </body>
