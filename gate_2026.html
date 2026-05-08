@@ -27,7 +27,15 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
 .cat-panel.active { display: block; }
 .insight-box { background: #1a1e30; border: 1px solid #3d4475; border-left: 3px solid #818cf8; border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; }
 .insight-box h3 { font-size: 11px; font-weight: 700; color: #818cf8; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+.insight-list { list-style: none; }
+.insight-list li { font-size: 12.5px; color: #94a3b8; padding: 3px 0 3px 16px; position: relative; }
+.insight-list li::before { content: "→"; position: absolute; left: 0; color: #818cf8; }
+.insight-list li strong { color: #e2e8f0; }
 .insight-note { font-size: 12px; color: #475569; font-style: italic; }
+.pionex-tip { margin-top: 10px; padding-top: 10px; border-top: 1px solid #2d3148; font-size: 12px; color: #4ade80; }
+.pionex-tip::before { content: "💡 Pionex 借鉴："; font-weight: 700; }
+.sub-pattern { background: #13151f; border: 1px dashed #2d3148; border-radius: 6px; padding: 10px 14px; margin-bottom: 12px; font-size: 12px; color: #64748b; }
+.sub-pattern strong { color: #94a3b8; display: block; margin-bottom: 2px; font-size: 12.5px; }
 .cards-list { display: flex; flex-direction: column; gap: 6px; }
 .card { background: #1a1d27; border: 1px solid #2d3148; border-radius: 7px; padding: 10px 14px; transition: border-color .15s; }
 .card:hover { border-color: #3d4475; }
@@ -45,11 +53,24 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
 .card.very-hot .card-title a { color: #fcd34d; }
 .hot-badge { display: inline-flex; align-items: center; gap: 3px; font-size: 10px; padding: 1px 6px; border-radius: 4px; font-weight: 700; white-space: nowrap; background: #451a00; color: #f97316; border: 1px solid #7c2d12; flex-shrink: 0; }
 .very-hot-badge { background: #3b1500; color: #fbbf24; border-color: #92400e; }
+.card-meta { display: flex; gap: 8px; margin-top: 5px; flex-wrap: wrap; align-items: center; }
+.badge { display: inline-flex; align-items: center; font-size: 10px; padding: 1px 7px; border-radius: 99px; font-weight: 600; white-space: nowrap; }
+.b-trade   { background: #1e2340; color: #818cf8; }
+.b-airdrop { background: #1a3a2a; color: #4ade80; }
+.b-new     { background: #1a2a3a; color: #38bdf8; }
+.b-ref     { background: #2a1a3a; color: #c084fc; }
+.b-vip     { background: #3a3a1a; color: #facc15; }
+.b-event   { background: #3a1a1a; color: #fb923c; }
+.b-social  { background: #1a3a3a; color: #2dd4bf; }
+.b-tool    { background: #2a2a1a; color: #a3e635; }
+.b-series  { background: #2d1a2a; color: #e879f9; }
 .card-info { display: flex; align-items: center; gap: 12px; margin-top: 4px; }
 .info-time { font-size: 11px; color: #475569; }
 .info-views { font-size: 11px; color: #475569; }
 .info-views.high { color: #d97706; font-weight: 600; }
 .info-views.very-high { color: #f59e0b; font-weight: 700; }
+.card-note { font-size: 11.5px; color: #64748b; line-height: 1.5; margin-top: 4px; }
+.card-note.placeholder { color: #334155; font-style: italic; }
 .legend { display: flex; gap: 16px; margin-bottom: 12px; font-size: 11px; color: #475569; flex-wrap: wrap; }
 .legend-item { display: flex; align-items: center; gap: 5px; }
 .legend-dot { width: 8px; height: 8px; border-radius: 2px; }
@@ -84,10 +105,19 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
   </div>
 
   <div id="cat-trade" class="cat-panel active">
+    
     <div class="insight-box">
       <h3>模式洞察：交易竞赛</h3>
-      <p class="insight-note">本期为自动更新，洞察内容待手动补充。</p>
+      <ul class="insight-list">
+        <li><strong>新币上线 = 固定配套合约赛</strong>：每个新币上线必配一场合约赛，奖池固定 10,000 USDT，标准模板。已确认 MEGA/BLEND/AIGENSYN 等连续复用。</li>
+        <li><strong>「达标即到账」替代排名制</strong>：交易拉力赛（40万）、打卡热力（50万）均用达标即到账，降低散户参与门槛，制造「人人有奖」感，阅读量明显高于排名制活动。</li>
+        <li><strong>WCTC S8 风云热议 阅读量最高（12,422）</strong>：赛事热议活动远超普通交易赛，说明「话题+内容」导向比纯奖励导向更有吸引力。</li>
+        <li><strong>周末专场填空档</strong>：SOL 周末专场、DEX 爆量狂欢，无新币时以热门资产维持活跃度，奖池 1-2.5万，成本极低。</li>
+        <li><strong>网格机器人是独立赛道</strong>：绑定 Gate 自动交易产品，已系列化到第4/6期，阅读量 4,000–8,000+，说明机器人赛道用户粘性高。</li>
+      </ul>
+      <div class="pionex-tip">「达标即到账」结构比排名赛更适合 Pionex 普通用户留存。新策略上线标配交易赛（固定奖池模板）可快速复用，边际成本极低。</div>
     </div>
+    <div class="sub-pattern"><strong>📌 新币配套合约赛（标准模板，已 3+ 次复用）</strong>新币上线 → 合约交易量阶梯（5档）→ 按比例瓜分 10,000 USDT → 周期 7 天。与项目方联动，可部分分摊奖池。</div>
     <div class="legend">
       <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div>热门 5,000–9,999 阅读</div>
       <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div>爆款 10,000+ 阅读</div>
@@ -102,6 +132,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-trade">大奖池</span><span class="badge b-series">打卡系列</span></div>
+        <div class="card-note">50 万 USDT 达标即到账，发布时间短所以阅读量尚低，预计后续继续攀升</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#2</div><div class="card-body">
         <div class="card-title-row">
@@ -112,6 +144,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-event">DEX 专属</span><span class="badge b-series">第3期</span></div>
+        <div class="card-note">每日打卡机制，双周周期，系列化运营 DEX 用户活跃度，发布 8 小时阅读 938</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#3</div><div class="card-body">
         <div class="card-title-row">
@@ -122,6 +156,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-trade">新币配套赛</span></div>
+        <div class="card-note">MEGA 上线配套合约赛，标准 10K 模板，阅读量近万——新热门资产配套赛的天然流量优势</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#4</div><div class="card-body">
         <div class="card-title-row">
@@ -132,6 +168,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-trade">机器人赛道</span><span class="badge b-event">周年主题</span></div>
+        <div class="card-note">网格机器人赛借助 13 周年流量，5 万奖池+周年叠加制造高曝光</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#5</div><div class="card-body">
         <div class="card-title-row">
@@ -142,6 +180,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-trade">大奖池</span></div>
+        <div class="card-note">现货+合约双赛道，达标即到账（非排名），40 万奖池。「达标即到账」降低门槛，阅读量稳定高</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#6</div><div class="card-body">
         <div class="card-title-row">
@@ -152,6 +192,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-vip">平台币生态</span></div>
+        <div class="card-note">GT 专项阅读 6,054，平台币生态活跃度高于预期，持有 GT 用户关注度强</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#7</div><div class="card-body">
         <div class="card-title-row">
@@ -162,6 +204,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-trade">新币配套赛</span></div>
+        <div class="card-note">标准 10K 模板（AIGENSYN 上线），阅读量与 BLEND 相近，验证模板稳定性</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#8</div><div class="card-body">
         <div class="card-title-row">
@@ -172,6 +216,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-trade">新币配套赛</span></div>
+        <div class="card-note">标准 10K 模板复用（BLEND 上线），稳定阅读量约 5K</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#9</div><div class="card-body">
         <div class="card-title-row">
@@ -182,6 +228,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-trade">DEX 专属</span><span class="badge b-series">每日打卡</span></div>
+        <div class="card-note">Gate DEX 产品活跃度激励，交易量排行+每日打卡双机制，25K 奖池</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#10</div><div class="card-body">
         <div class="card-title-row">
@@ -192,6 +240,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-trade">机器人赛道</span><span class="badge b-series">第4期</span></div>
+        <div class="card-note">机器人赛道第4期，含限量实物周边，TradFi 传统资产机器人推广</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#11</div><div class="card-body">
         <div class="card-title-row">
@@ -202,6 +252,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-new">第三方联动</span></div>
+        <div class="card-note">与预测市场 Polymarket 合作，5K 包赔吸引外部用户迁移，「包赔」关键词点击率高</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#12</div><div class="card-body">
         <div class="card-title-row">
@@ -212,6 +264,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-trade">外部赛联动</span><span class="badge b-social">UGC传播</span></div>
+        <div class="card-note">赛事战报分享活动，阅读量远超普通交易赛，说明「话题+社交」导向吸引力强于纯奖励</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#13</div><div class="card-body">
         <div class="card-title-row">
@@ -222,6 +276,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-trade">新币上线赛</span></div>
+        <div class="card-note">ES 代币赛，奖励为项目代币（项目方出代币，Gate 零成本），阅读量高说明以太坊生态热度</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#14</div><div class="card-body">
         <div class="card-title-row">
@@ -232,15 +288,25 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-trade">周末专场</span></div>
+        <div class="card-note">热门资产 SOL 专项，周末填空档，1 万奖池成本极低，阅读量却达 5,787</div>
       </div></div></div>
     </div>
   </div>
 
   <div id="cat-airdrop" class="cat-panel">
+    
     <div class="insight-box">
       <h3>模式洞察：空投&新币上线</h3>
-      <p class="insight-note">本期为自动更新，洞察内容待手动补充。</p>
+      <ul class="insight-list">
+        <li><strong>KAIO 首发上线公告阅读量最高（6,848）</strong>：新币上线公告的阅读量显著高于其他活动，说明「首发」话题本身的流量价值极大。</li>
+        <li><strong>CandyDrop 159期（10,097）是所有空投类第一</strong>：BLEND 代币热度 + 系列固定期次，双重加持。系列化期次让用户建立持续关注习惯。</li>
+        <li><strong>BountyDrop 是零成本 DEX 生态合作</strong>：4 次复用相同模板（RealGo/IOTRADER/Catapult/Decibel），项目方出代币，Gate 出流量，阅读量稳定在 4,600–5,000。</li>
+        <li><strong>「开仓得 $2」是新手合约激活神器</strong>：PRL/MEZO 用完全相同模板，阅读量均破 5,000，零门槛+高上限（$522）制造参与感。</li>
+      </ul>
+      <div class="pionex-tip">「新策略/新功能首发公告」本身就有高自然流量，可以在公告页配套「开启即得」活动。BountyDrop 模式与 Pionex 新功能合作方谈判时可要求对方提供代币奖励池。</div>
     </div>
+    <div class="sub-pattern"><strong>📌 「开仓空投」模板（PRL / MEZO 共用，2次复用）</strong>开合约仓 → 即得 $2 代币 → 阶梯最高 $522 → 限新用户或全体 → 周期 7-14 天。几乎零门槛，激活首次开仓。</div>
     <div class="legend">
       <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div>热门 5,000–9,999 阅读</div>
       <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div>爆款 10,000+ 阅读</div>
@@ -255,6 +321,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-airdrop">开仓空投</span><span class="badge b-new">新手友好</span></div>
+        <div class="card-note">同「开仓 $2」模板（发布 7 小时），阅读量已破千，与 MEZO 同款模板验证稳定性</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#2</div><div class="card-body">
         <div class="card-title-row">
@@ -265,6 +333,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-airdrop">项目合作</span></div>
+        <div class="card-note">AI 项目合作，奖励为算力体验券，Gate 零成本，项目方获曝光</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#3</div><div class="card-body">
         <div class="card-title-row">
@@ -275,6 +345,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-airdrop">首发上线</span><span class="badge b-airdrop">CandyDrop</span></div>
+        <div class="card-note">新币首发上线公告阅读量高，「首发」话题本身带自然流量，配套 CandyDrop 增强转化</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#4</div><div class="card-body">
         <div class="card-title-row">
@@ -285,6 +357,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-airdrop">全民空投</span></div>
+        <div class="card-note">以 20 ETH 为奖励，全平台推广，「ETH」关键词话题性强，发布较新阅读量仍在增长</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#5</div><div class="card-body">
         <div class="card-title-row">
@@ -295,6 +369,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-airdrop">BountyDrop</span><span class="badge b-series">DEX生态</span></div>
+        <div class="card-note">BountyDrop 阅读量最高（8,599），积分奖励+DEX 生态组合效果好</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#6</div><div class="card-body">
         <div class="card-title-row">
@@ -305,6 +381,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-airdrop">BountyDrop</span><span class="badge b-series">DEX生态</span></div>
+        <div class="card-note">BountyDrop 系列，阅读量稳定 5K 左右，项目方出代币，Gate 零成本</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#7</div><div class="card-body">
         <div class="card-title-row">
@@ -315,6 +393,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-airdrop">开仓空投</span><span class="badge b-new">新手友好</span></div>
+        <div class="card-note">「开仓 $2」模板，阅读量 5,042，验证低门槛空投对新手的持续吸引力</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#8</div><div class="card-body">
         <div class="card-title-row">
@@ -325,6 +405,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-trade">外部赛联动</span><span class="badge b-event">五一主题</span></div>
+        <div class="card-note">WCTC S8 联动，Gate 提供 3 BTC 专属奖池，节日+外部赛双重流量</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#9</div><div class="card-body">
         <div class="card-title-row">
@@ -335,6 +417,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-airdrop">BountyDrop</span><span class="badge b-series">DEX生态</span></div>
+        <div class="card-note">BountyDrop 第3次，奖励为创造者套餐（非代币），仍有 4,647 阅读</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#10</div><div class="card-body">
         <div class="card-title-row">
@@ -345,6 +429,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-airdrop">BountyDrop</span><span class="badge b-series">DEX生态</span></div>
+        <div class="card-note">BountyDrop 第4次，奖励为 USDC，4 次模板阅读量均在 4,600–8,600，稳定可靠</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#11</div><div class="card-body">
         <div class="card-title-row">
@@ -355,14 +441,22 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-trade">新品类专区</span></div>
+        <div class="card-note">合约股票新品类上线，奖池提升至 20 万 USDT，配合新专区推广，成功制造话题</div>
       </div></div></div>
     </div>
   </div>
 
   <div id="cat-newuser" class="cat-panel">
+    
     <div class="insight-box">
       <h3>模式洞察：新手&入金奖励</h3>
-      <p class="insight-note">本期为自动更新，洞察内容待手动补充。</p>
+      <ul class="insight-list">
+        <li><strong>Polymarket 联动（8,739）是新手类最高阅读</strong>：与第三方平台联动，吸引 Polymarket 用户迁移，「包赔」关键词大幅提升点击率。</li>
+        <li><strong>「首单亏损全补」是降低新手恐惧的创新玩法</strong>：合约交易保障（最高补 102 USDT），用「兜底」消除心理障碍，阅读量 4,322，说明有效。</li>
+        <li><strong>闪兑系列（4种玩法）覆盖同一功能的不同用户</strong>：挑战赛（新手首次）、打卡赛（活跃用户）、定投福利（习惯培养）、幸运抽（游戏化），阅读量均在 5,000–8,700，说明闪兑功能用户基础稳健。</li>
+      </ul>
+      <div class="pionex-tip">「首次启动策略亏损保障」直接对标 Gate 的「首单亏损全补」，适合 Pionex 新用户 AI 策略激活场景——首次启动策略亏损补贴 X USDT，消除初次使用门槛。</div>
     </div>
     <div class="legend">
       <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div>热门 5,000–9,999 阅读</div>
@@ -378,6 +472,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-new">闪兑系列</span><span class="badge b-series">功能推广</span></div>
+        <div class="card-note">闪兑系列最高阅读（8,745），「首兑即得」零门槛吸引力强，发布时间近加速热度</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#2</div><div class="card-body">
         <div class="card-title-row">
@@ -388,6 +484,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-new">闪兑系列</span><span class="badge b-series">打卡机制</span></div>
+        <div class="card-note">假期加码+每日打卡，「$350 即时到账」强调实时性，阅读量 7,714 高于普通活动</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#3</div><div class="card-body">
         <div class="card-title-row">
@@ -398,6 +496,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-new">闪兑系列</span><span class="badge b-series">第2期</span></div>
+        <div class="card-note">「首单即送 $300」高回报噱头，培养定投习惯，阅读量 6,452</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#4</div><div class="card-body">
         <div class="card-title-row">
@@ -408,6 +508,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-new">新手入门</span></div>
+        <div class="card-note">开仓即得 10U 基础奖，阶梯最高 510U，阅读量 5,032，低门槛+高上限组合有效</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#5</div><div class="card-body">
         <div class="card-title-row">
@@ -418,6 +520,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-new">新手保障</span></div>
+        <div class="card-note">🌟 创新玩法：首单亏损全补，用「兜底」消除新手恐惧，4,322 阅读，成本可控（新手首单亏损额通常小）</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#6</div><div class="card-body">
         <div class="card-title-row">
@@ -428,14 +532,23 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-new">闪兑系列</span><span class="badge b-series">第14期</span></div>
+        <div class="card-note">「100% 中奖」关键词，消除参与疑虑，5,243 阅读，是闪兑系列稳定玩法之一</div>
       </div></div></div>
     </div>
   </div>
 
   <div id="cat-referral" class="cat-panel">
+    
     <div class="insight-box">
       <h3>模式洞察：邀请返佣</h3>
-      <p class="insight-note">本期为自动更新，洞察内容待手动补充。</p>
+      <ul class="insight-list">
+        <li><strong>「7 天乐」系列（第9期+升级版）阅读量 2,685</strong>：打卡机制把邀请活动从「一次性」变成「7 天持续」，延长用户活跃周期。</li>
+        <li><strong>「邀友赢 XRP」系列（第2/3期）稳定 4,000+ 阅读</strong>：把热门资产（XRP）与邀请绑定，资产本身的搜索热度带来自然流量，低成本高传播。</li>
+        <li><strong>「72 小时擂台战」（7,195阅读）是邀请类最高</strong>：短周期（72h）+ 代币奖励（PENGU），紧迫感 + 代币热度双驱动，阅读量远高于普通邀请活动。</li>
+        <li><strong>TradFi 开户礼是产品线导流邀请</strong>：邀请绑定新产品线（TradFi），把邀请激励与产品推广结合，30U/人即时到账。</li>
+      </ul>
+      <div class="pionex-tip">「72 小时短赛邀请 + 热门代币」的组合阅读量最高，适合 Pionex 用于拉新冲刺——绑定市场热点代币（如近期热门 meme）做 72 小时邀请冲刺，成本可控且传播效果好。</div>
     </div>
     <div class="legend">
       <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div>热门 5,000–9,999 阅读</div>
@@ -451,6 +564,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-ref">资产绑定</span><span class="badge b-series">第3期</span></div>
+        <div class="card-note">发布仅 11 小时阅读已破千，XRP 热度带来自然流量，每邀即时到账减少等待摩擦</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#2</div><div class="card-body">
         <div class="card-title-row">
@@ -461,6 +576,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-ref">邀请系列</span><span class="badge b-series">7天乐升级版</span></div>
+        <div class="card-note">「7天乐」升级版，即时 20U + 7 天打卡上限 1,100U，发布 1 天阅读已 2,685</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#3</div><div class="card-body">
         <div class="card-title-row">
@@ -471,6 +588,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-airdrop">CandyDrop</span><span class="badge b-series">第159期</span></div>
+        <div class="card-note">标准 CandyDrop：交易+邀请双任务，代币由项目方提供，本期 BLEND 热度带动阅读量破万</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#4</div><div class="card-body">
         <div class="card-title-row">
@@ -481,6 +600,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-ref">产品导流</span></div>
+        <div class="card-note">邀请绑定 TradFi 产品线，为新功能拉新，30U/人即时到账，产品推广效率高</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#5</div><div class="card-body">
         <div class="card-title-row">
@@ -491,6 +612,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-airdrop">DEX新手</span><span class="badge b-new">首单激励</span></div>
+        <div class="card-note">DEX 合约新用户首单即进入奖池，推广 DEX 合约功能，门槛极低</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#6</div><div class="card-body">
         <div class="card-title-row">
@@ -501,6 +624,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-ref">资产绑定</span><span class="badge b-series">第2期</span></div>
+        <div class="card-note">同模板第2期，阅读 4,339，与第3期对比可预测第3期最终阅读量约 4,000+</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#7</div><div class="card-body">
         <div class="card-title-row">
@@ -511,6 +636,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-ref">邀请系列</span><span class="badge b-series">第9期</span></div>
+        <div class="card-note">7天乐第9期，阅读 4,463，系列固定运营节奏</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#8</div><div class="card-body">
         <div class="card-title-row">
@@ -521,6 +648,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-ref">短赛邀请</span><span class="badge b-series">第2期</span></div>
+        <div class="card-note">邀请类最高阅读（7,195），72h 紧迫感 + PENGU 热度双驱动，短赛制造爆发效果</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#9</div><div class="card-body">
         <div class="card-title-row">
@@ -531,14 +660,22 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-ref">常驻活动</span></div>
+        <div class="card-note">100 万 USDT 常驻邀请入口，单次最高 100U/人，持续引流</div>
       </div></div></div>
     </div>
   </div>
 
   <div id="cat-vip" class="cat-panel">
+    
     <div class="insight-box">
       <h3>模式洞察：VIP 专属</h3>
-      <p class="insight-note">本期为自动更新，洞察内容待手动补充。</p>
+      <ul class="insight-list">
+        <li><strong>VIP 资产护航计划（7,814）是 VIP 类最高</strong>：「亏损补贴」对高净值用户吸引力远超「奖励」，TradFi 扩展说明 Gate 在向传统资产用户渗透。</li>
+        <li><strong>VIP 嘉年华第14期（1,057）阅读量偏低</strong>：实物奢侈品（麦卡伦威士忌）对普通用户吸引力弱，但对目标 VIP 用户精准触达——低阅读量≠低效果。</li>
+        <li><strong>VIP 回馈三重礼（2,682）三合一结构</strong>：交易返现+GT 空投+新人直通 VIP5，同时覆盖留存、生态、拉新三个目标，设计高效。</li>
+      </ul>
+      <div class="pionex-tip">Gate 的 VIP 亏损补贴模式（护航计划）比奖励模式对高净值用户更有说服力。Pionex 高 AUM 用户的专属保障计划可参考此结构设计。</div>
     </div>
     <div class="legend">
       <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div>热门 5,000–9,999 阅读</div>
@@ -554,6 +691,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-vip">VIP嘉年华</span><span class="badge b-series">第14期</span></div>
+        <div class="card-note">实物奢侈品（麦卡伦）定向 VIP 用户，低阅读量≠低效果，目标群体精准</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#2</div><div class="card-body">
         <div class="card-title-row">
@@ -564,6 +703,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-vip">VIP加码</span></div>
+        <div class="card-note">全员+VIP 双层：全员基础空投，VIP 专属加码奖池，覆盖面广</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#3</div><div class="card-body">
         <div class="card-title-row">
@@ -574,6 +715,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-vip">VIP回馈</span><span class="badge b-series">第2期</span></div>
+        <div class="card-note">三合一：返现（留存）+ GT 空投（生态）+ 新人直通 VIP5（拉新），结构高效</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#4</div><div class="card-body">
         <div class="card-title-row">
@@ -584,6 +727,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-vip">VIP迎新</span><span class="badge b-event">周年主题</span></div>
+        <div class="card-note">周年节点 VIP 迎新，80 万奖池+仪式感，发布 1 天阅读仍在上升</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#5</div><div class="card-body">
         <div class="card-title-row">
@@ -594,6 +739,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-vip">亏损补贴</span><span class="badge b-series">第3期</span></div>
+        <div class="card-note">VIP 类最高阅读（7,814），「亏损补贴」对高净值用户的吸引力远超「奖励」，已系列化</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#6</div><div class="card-body">
         <div class="card-title-row">
@@ -604,14 +751,22 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-trade">外部赛联动</span><span class="badge b-vip">VIP 专属</span></div>
+        <div class="card-note">WCTC 期间 VIP 亏损补贴，消除高净值用户顾虑，促进参赛交易</div>
       </div></div></div>
     </div>
   </div>
 
   <div id="cat-event" class="cat-panel">
+    
     <div class="insight-box">
       <h3>模式洞察：节日&主题</h3>
-      <p class="insight-note">本期为自动更新，洞察内容待手动补充。</p>
+      <ul class="insight-list">
+        <li><strong>「疯狂星期三」是固定周期+高端实物的最佳实践</strong>：每周三发布，主题轮换（生活方式/户外），奖品为高端品牌实物（LV/大疆/Apple Watch），交易 $1 即解锁，阅读量均在 7,000+。</li>
+        <li><strong>TradFi 签启好运（5,733）实物金条话题性强</strong>：50 克金条是圈外话题，吸引传统资产投资者，与加密圈惯用的「代币/USDT」形成差异化。</li>
+        <li><strong>WCTC 系列活动节点运营</strong>：赛事期间连发 3 条相关活动（风云热议/Booster发帖/五一空投），拉长单一赛事的运营周期，活动间形成交叉传播。</li>
+      </ul>
+      <div class="pionex-tip">「疯狂星期三」固定日+高端实物模板可直接移植为 Pionex「每周三策略挑战」——固定周期+实物奖品（如 AirPods/华为手表），建立用户期待感，成本单次固定可控。</div>
     </div>
     <div class="legend">
       <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div>热门 5,000–9,999 阅读</div>
@@ -627,6 +782,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-event">疯狂星期三</span></div>
+        <div class="card-note">发布 1 天阅读 3,544（仍在增长），LV 品牌实物+$1 低门槛，预计最终破 7,000+</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#2</div><div class="card-body">
         <div class="card-title-row">
@@ -637,6 +794,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-event">疯狂星期三</span></div>
+        <div class="card-note">大疆+Apple Watch 组合，科技感强话题性高，阅读 7,159 是节日类第一梯队</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#3</div><div class="card-body">
         <div class="card-title-row">
@@ -647,14 +806,23 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-event">产品推广</span></div>
+        <div class="card-note">金条+NVDAON，圈外奖品差异化，0 门槛创造高参与率，5,733 阅读</div>
       </div></div></div>
     </div>
   </div>
 
   <div id="cat-social" class="cat-panel">
+    
     <div class="insight-box">
       <h3>模式洞察：社区互动</h3>
-      <p class="insight-note">本期为自动更新，洞察内容待手动补充。</p>
+      <ul class="insight-list">
+        <li><strong>Gate Booster 发帖任务（8,807）阅读远超其奖池大小</strong>：仅 5K USDT 奖池，阅读量却接近 9K，说明「内容创作任务」对用户的参与驱动力不亚于大奖池交易赛。</li>
+        <li><strong>「Gate 广场」发帖领红包（7,871）是最低成本高阅读活动</strong>：日常发帖领红包，几乎无门槛，7,871 阅读说明这类轻任务的长尾积累效果显著。</li>
+        <li><strong>网格机器人教育内容（8,281）效果超预期</strong>：「1 分钟掌握」产品教育内容阅读量 8,281，证明降低认知门槛的内容型活动有极高的自然传播价值。</li>
+        <li><strong>Gate Live 生态系列化运营</strong>：主播回归季+新人开播礼+直播嘉年华（第21期）三类并行，覆盖老主播/新主播/观看用户，系列已稳定到第21期。</li>
+      </ul>
+      <div class="pionex-tip">「1 分钟掌握 X 策略」的内容教育活动对 Pionex 高度适用——8K 阅读量成本接近零，同时帮助用户激活新策略。可做成系列：「1 分钟看懂网格 / DCA / 马丁 / 套利」。</div>
     </div>
     <div class="legend">
       <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div>热门 5,000–9,999 阅读</div>
@@ -670,6 +838,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-social">直播生态</span><span class="badge b-event">周年主题</span></div>
+        <div class="card-note">老主播回归，$100 开播奖励+流量扶持，发布 4 小时阅读 637</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#2</div><div class="card-body">
         <div class="card-title-row">
@@ -680,6 +850,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-social">直播生态</span><span class="badge b-new">新主播</span></div>
+        <div class="card-note">与主播回归季同日发布，新老并行，覆盖全类型主播</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#3</div><div class="card-body">
         <div class="card-title-row">
@@ -690,6 +862,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-social">直播生态</span><span class="badge b-series">第21期</span></div>
+        <div class="card-note">直播嘉年华系列（第21期），系列化到第21期说明 Gate Live 直播生态稳定且活跃</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#4</div><div class="card-body">
         <div class="card-title-row">
@@ -700,6 +874,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-social">UGC激励</span></div>
+        <div class="card-note">日常发帖领红包，7,871 阅读是社区类最高，说明轻任务+持续奖励的组合效果出色</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#5</div><div class="card-body">
         <div class="card-title-row">
@@ -710,6 +886,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-event">赛事联动</span><span class="badge b-series">第8期</span></div>
+        <div class="card-note">赛事发帖任务，仅 5K 奖池却有 8,807 阅读，说明用户对内容创作活动参与度极高</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#6</div><div class="card-body">
         <div class="card-title-row">
@@ -720,14 +898,22 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-social">教育内容</span><span class="badge b-tool">产品推广</span></div>
+        <div class="card-note">🌟 内容型活动：产品教育 + 0 成本体验，8,281 阅读远超同期大多数奖励活动，高 ROI</div>
       </div></div></div>
     </div>
   </div>
 
   <div id="cat-routine" class="cat-panel">
+    
     <div class="insight-box">
       <h3>模式洞察：常规系列</h3>
-      <p class="insight-note">本期为自动更新，洞察内容待手动补充。</p>
+      <ul class="insight-list">
+        <li><strong>合约积分空投每 3 天一期（112→116 期）</strong>：固定 25 GUSD + 100 USDT，约 3-4 天一期，已是自动化批量发放，相当于合约用户的「周期工资」。</li>
+        <li><strong>阅读量稳定在 4,900–5,900</strong>：4 期数据高度一致，说明拥有固定关注用户群，这类活动的价值在于低成本维持合约用户「不离开」。</li>
+        <li><strong>「系列期次编号」是留存利器</strong>：让用户感知下一期还有，建立「下次再来领」的预期。CandyDrop（159期）、合约积分空投（116期）、直播嘉年华（21期）都靠此机制维持长期活跃。</li>
+      </ul>
+      <div class="pionex-tip">Pionex 的「机器人使用激励」可参考此模式做系列化——「网格策略使用奖励第 N 期」，每期固定小奖励，维持策略用户的持续活跃，成本 = 期次奖励 × 活跃用户数，完全可控。</div>
     </div>
     <div class="legend">
       <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div>热门 5,000–9,999 阅读</div>
@@ -743,6 +929,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-series">第116期</span></div>
+        <div class="card-note">发布 9 小时阅读 1,180，预计最终稳定至 5,000+（参考历史数据）</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#2</div><div class="card-body">
         <div class="card-title-row">
@@ -753,6 +941,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-series">第115期</span></div>
+        <div class="card-note">发布 1 天阅读 2,927，仍在增长，预计 5,000+</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#3</div><div class="card-body">
         <div class="card-title-row">
@@ -763,6 +953,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-series">第114期</span></div>
+        <div class="card-note">阅读 5,902，与 113/112 期高度一致，验证固定用户群稳定订阅</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#4</div><div class="card-body">
         <div class="card-title-row">
@@ -773,6 +965,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-series">第113期</span></div>
+        <div class="card-note">阅读 4,904，113-114 期间约 2 天，频率约每 3 天一期</div>
       </div></div></div>
       <div class="card"><div class="card-row"><div class="card-num">#5</div><div class="card-body">
         <div class="card-title-row">
@@ -783,6 +977,8 @@ body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMac
           <span class="info-time">🕐 —</span>
           <span class="info-views">👁 —</span>
         </div>
+        <div class="card-meta"><span class="badge b-series">第112期</span></div>
+        <div class="card-note">阅读 5,647，112-116 期阅读均值约 5,000+，高度稳定的固定用户留存机制</div>
       </div></div></div>
     </div>
   </div>
