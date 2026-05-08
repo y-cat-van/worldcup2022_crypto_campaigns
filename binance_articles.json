@@ -1,4 +1,1004 @@
 {
+  "266591": {
+    "id": "266591",
+    "code": "193eff72eac54970a64cdbc9c7b7a13d",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/193eff72eac54970a64cdbc9c7b7a13d",
+    "title": "币安理财：申购RLUSD活期产品，享最高8.5%年化收益率（2026-02-27）",
+    "time": "2026-02-26",
+    "releaseDate": 1772096408961,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "266629": {
+    "id": "266629",
+    "code": "56caae80406449579ed496bb2fb60ba2",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/56caae80406449579ed496bb2fb60ba2",
+    "title": "Janction 交易竞赛：交易Janction（JCT），分享20万美元等值奖励",
+    "time": "2026-02-26",
+    "releaseDate": 1772107218567,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "266670": {
+    "id": "266670",
+    "code": "251b268bfabf49748daab8fb2ce37d55",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/251b268bfabf49748daab8fb2ce37d55",
+    "title": "币安理财：申购USDC活期产品，享最高5.5%年化收益率（2026-02-28）",
+    "time": "2026-02-27",
+    "releaseDate": 1772177422151,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "266704": {
+    "id": "266704",
+    "code": "60c543348f0746eb880f76d95492f4b5",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/60c543348f0746eb880f76d95492f4b5",
+    "title": "币安广场直播狂欢季：交易为王，狂赚U礼！",
+    "time": "2026-02-27",
+    "releaseDate": 1772182814611,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "266710": {
+    "id": "266710",
+    "code": "820d2bb637d04f17983048ab7f4bf1f1",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/820d2bb637d04f17983048ab7f4bf1f1",
+    "title": "币安广场：完成创作者任务台任务，解锁8,600,000 ROBO代币券奖励！",
+    "time": "2026-02-27",
+    "releaseDate": 1772188207016,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "266722": {
+    "id": "266722",
+    "code": "0a2ddde86af548ffa0ba31c8e135b115",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/0a2ddde86af548ffa0ba31c8e135b115",
+    "title": "币安钱包理财Katana活动：在Katana vbUSDC资金池申购，瓜分50,000,000 KAT空投奖励",
+    "time": "2026-02-27",
+    "releaseDate": 1772199021082,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "266821": {
+    "id": "266821",
+    "code": "d290e76b672c4eb299da8f57f288812b",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/d290e76b672c4eb299da8f57f288812b",
+    "title": "币安KGST Booster计划：申购KGST活期产品，享最高10%年化收益率（2026-03-03）",
+    "time": "2026-03-02",
+    "releaseDate": 1772438406718,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "267006": {
+    "id": "267006",
+    "code": "6e1bee9d7a424f509a18e51a458ad1d3",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/6e1bee9d7a424f509a18e51a458ad1d3",
+    "title": "Fabric Protocol交易竞赛：交易Fabric Protocol（ROBO），分享3万美元等值奖励",
+    "time": "2026-03-03",
+    "releaseDate": 1772539210110,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "267078": {
+    "id": "267078",
+    "code": "5e3bd35d5e6541e9beccbd7c12d28413",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/5e3bd35d5e6541e9beccbd7c12d28413",
+    "title": "币安月度挑战：完成3月挑战赛，可解锁50万USDC奖池！",
+    "time": "2026-03-04",
+    "releaseDate": 1772600426948,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "267157": {
+    "id": "267157",
+    "code": "a7597b96785e4594881c2b87b86c3949",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/a7597b96785e4594881c2b87b86c3949",
+    "title": "币安理财新币独家特惠：申购OPN定期产品，享7天200%年化收益率（2026-03-05）",
+    "time": "2026-03-04",
+    "releaseDate": 1772611208427,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "267190": {
+    "id": "267190",
+    "code": "392c9e81e76d4ea1a6d3d6b9f0cbac3c",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/392c9e81e76d4ea1a6d3d6b9f0cbac3c",
+    "title": "学习赚币：完成问答，赢取OpenEden (EDEN) 代币奖励！",
+    "time": "2026-03-04",
+    "releaseDate": 1772614831994,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "267240": {
+    "id": "267240",
+    "code": "70735b44f2de4791a6068cf3797ca084",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/70735b44f2de4791a6068cf3797ca084",
+    "title": "Block Street交易竞赛：交易Block Street（BSB），分享1,000,000 BSB奖励",
+    "time": "2026-03-04",
+    "releaseDate": 1772631000000,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "267244": {
+    "id": "267244",
+    "code": "4c2852795e0a49a0bf72cd83714f743b",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/4c2852795e0a49a0bf72cd83714f743b",
+    "title": "三月邀请双榜赛—邀好友一起瓜分 110,000 USDC",
+    "time": "2026-03-04",
+    "releaseDate": 1772625609183,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "267351": {
+    "id": "267351",
+    "code": "911c48510326483c913d1ed229dff2ae",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/911c48510326483c913d1ed229dff2ae",
+    "title": "币安学院比特币专题页面：完成测试赢取BTC奖励！",
+    "time": "2026-03-05",
+    "releaseDate": 1772672400000,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "267354": {
+    "id": "267354",
+    "code": "4bbd4a6c37ef40f2b29189e72cbb0bbe",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/4bbd4a6c37ef40f2b29189e72cbb0bbe",
+    "title": "币安理财：申购U活期产品，享最高10.5%年化收益率（2026-03-06）",
+    "time": "2026-03-05",
+    "releaseDate": 1772703028431,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "267384": {
+    "id": "267384",
+    "code": "7588c8608e6f42cbb53e8d4d0f200d09",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/7588c8608e6f42cbb53e8d4d0f200d09",
+    "title": "交易Opinion（OPN）：即可瓜分2,500,000 OPN奖池！",
+    "time": "2026-03-05",
+    "releaseDate": 1772708414249,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "267386": {
+    "id": "267386",
+    "code": "0d53b443694c475f9ef0b86370617985",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/0d53b443694c475f9ef0b86370617985",
+    "title": "Humanity Protocol交易竞赛：交易Humanity Protocol（H），分享20万美元等值奖励",
+    "time": "2026-03-05",
+    "releaseDate": 1772710213893,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "267464": {
+    "id": "267464",
+    "code": "6512b63e046c4cad904aed12a9efbf9c",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/6512b63e046c4cad904aed12a9efbf9c",
+    "title": "交易Fabric Protocol（ROBO）：即可瓜分30,000,000 ROBO奖池！",
+    "time": "2026-03-06",
+    "releaseDate": 1772789415576,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "267469": {
+    "id": "267469",
+    "code": "4a659cc17d464adb8ccc2890d202e39a",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/4a659cc17d464adb8ccc2890d202e39a",
+    "title": "ETHGas交易竞赛：交易ETHGas（GWEI），分享20万美元等值奖励",
+    "time": "2026-03-06",
+    "releaseDate": 1772794805946,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "267628": {
+    "id": "267628",
+    "code": "748940924c614022af048669e2b087d9",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/748940924c614022af048669e2b087d9",
+    "title": "交易币安Alpha代币化证券，瓜分500,000 美元等值黄金奖励！",
+    "time": "2026-03-09",
+    "releaseDate": 1773043200000,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "267824": {
+    "id": "267824",
+    "code": "611bfd0165cc46cb89e06a6549ce2ccf",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/611bfd0165cc46cb89e06a6549ce2ccf",
+    "title": "币安理财：申购ETH活期产品瓜分1000万 SHELL奖励，并享受最高1.5%年化！",
+    "time": "2026-03-11",
+    "releaseDate": 1773190815734,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "267960": {
+    "id": "267960",
+    "code": "4ad6e3210efc472d9836e172e930aa23",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/4ad6e3210efc472d9836e172e930aa23",
+    "title": "第三季币安钱包链上永续合约里程碑挑战赛 -  大宗商品专场 ：瓜分最高100,000 USDT奖励！",
+    "time": "2026-03-11",
+    "releaseDate": 1773230415102,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "268045": {
+    "id": "268045",
+    "code": "17fc30341dc0422488f62b94dc21ad96",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/17fc30341dc0422488f62b94dc21ad96",
+    "title": "Tria 交易竞赛：交易Tria（TRIA），分享20万美元等值奖励",
+    "time": "2026-03-12",
+    "releaseDate": 1773313209534,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "268048": {
+    "id": "268048",
+    "code": "c5b35c7e635e42ea96e290274e54fb15",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/c5b35c7e635e42ea96e290274e54fb15",
+    "title": "KITE交易量锦标赛：交易瓜分高达500,000 KITE奖池",
+    "time": "2026-03-12",
+    "releaseDate": 1773306026699,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "268062": {
+    "id": "268062",
+    "code": "d6fd86054b00445a97897606033970d8",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/d6fd86054b00445a97897606033970d8",
+    "title": "币安广场：完成创作者任务台任务，解锁2,000,000 NIGHT代币券奖励！",
+    "time": "2026-03-12",
+    "releaseDate": 1773309608899,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "268189": {
+    "id": "268189",
+    "code": "65317d61d1c445f99f73a04c05233dd2",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/65317d61d1c445f99f73a04c05233dd2",
+    "title": "币安理财：申购RLUSD活期产品，前10,000 RLUSD可享最高8%年化收益率",
+    "time": "2026-03-13",
+    "releaseDate": 1773370831861,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "268244": {
+    "id": "268244",
+    "code": "622b7c207e104e28a94f47afb619e7df",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/622b7c207e104e28a94f47afb619e7df",
+    "title": "交易Midnight（NIGHT）：即可瓜分90,000,000 NIGHT奖池！",
+    "time": "2026-03-13",
+    "releaseDate": 1773385216884,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "268315": {
+    "id": "268315",
+    "code": "1a40fb55893c438db6bc117bfc200d88",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/1a40fb55893c438db6bc117bfc200d88",
+    "title": "Velvet 交易竞赛：交易VELVET（VELVET），分享20万美元等值奖励",
+    "time": "2026-03-13",
+    "releaseDate": 1773399600000,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "268379": {
+    "id": "268379",
+    "code": "322388e719b84851b8bd71ac50c6b34f",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/322388e719b84851b8bd71ac50c6b34f",
+    "title": "币安超级赚币推出Midnight（NIGHT）：季度分享最高1.2亿NIGHT，总奖池达4.8亿NIGHT",
+    "time": "2026-03-16",
+    "releaseDate": 1773648009579,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "268561": {
+    "id": "268561",
+    "code": "f94b496c858448c6ac9847b306babbfd",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/f94b496c858448c6ac9847b306babbfd",
+    "title": "Block Street交易竞赛：交易Block Street（BSB），分享10万美元等值奖励",
+    "time": "2026-03-17",
+    "releaseDate": 1773745205895,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "268622": {
+    "id": "268622",
+    "code": "49a9f743c4e646579207517db4d9503c",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/49a9f743c4e646579207517db4d9503c",
+    "title": "SAHARA交易量锦标赛：交易瓜分高达4,000,000 SAHARA奖池",
+    "time": "2026-03-18",
+    "releaseDate": 1773813619946,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "268738": {
+    "id": "268738",
+    "code": "a2e3dda0471b4fabb3ec805ad71bc135",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/a2e3dda0471b4fabb3ec805ad71bc135",
+    "title": "币安理财：申购U活期产品，前20,000 U可享最高10%年化收益率（2026-03-20）",
+    "time": "2026-03-19",
+    "releaseDate": 1773900025597,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "268769": {
+    "id": "268769",
+    "code": "549b60c5e8934278904d3e36afb27275",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/549b60c5e8934278904d3e36afb27275",
+    "title": "交易Katana（KAT）：即可瓜分25,000,000 KAT奖池！",
+    "time": "2026-03-19",
+    "releaseDate": 1773907211557,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "268787": {
+    "id": "268787",
+    "code": "d0886cd0da82460ba8c32b466f7b2cc1",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/d0886cd0da82460ba8c32b466f7b2cc1",
+    "title": "币安广场：完成创作者任务台任务，解锁1,968,000 SIGN代币券奖励！",
+    "time": "2026-03-19",
+    "releaseDate": 1773912608189,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "268874": {
+    "id": "268874",
+    "code": "bc1729b3299c45689b6780b2428b845c",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/bc1729b3299c45689b6780b2428b845c",
+    "title": "在币安现货、资金、杠杆和合约账户中持有USD1，瓜分1.35亿WLFI代币奖励（2026-03-20）",
+    "time": "2026-03-20",
+    "releaseDate": 1773972010878,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "268896": {
+    "id": "268896",
+    "code": "368c423ca72c4504a3028885f23d08db",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/368c423ca72c4504a3028885f23d08db",
+    "title": "币安理财：申购SXT活期产品，前100,000 SXT 可享最高35%年化收益率（2026-03-21）",
+    "time": "2026-03-20",
+    "releaseDate": 1773993616262,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "268923": {
+    "id": "268923",
+    "code": "342cf2d1aa4c4ac7a2b651b55db5abc1",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/342cf2d1aa4c4ac7a2b651b55db5abc1",
+    "title": "CFG交易量锦标赛：交易瓜分高达835,000 CFG奖池",
+    "time": "2026-03-20",
+    "releaseDate": 1773997216949,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "268949": {
+    "id": "268949",
+    "code": "703d0a3d099d436894ddfcec15fcbdf3",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/703d0a3d099d436894ddfcec15fcbdf3",
+    "title": "Unitas 交易竞赛：交易 Unitas（UP），分享 20 万美元等值奖励",
+    "time": "2026-03-20",
+    "releaseDate": 1774004406337,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "269217": {
+    "id": "269217",
+    "code": "ac91a033a68a45a4b3e190b13e5f11a5",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/ac91a033a68a45a4b3e190b13e5f11a5",
+    "title": "币安理财新币独家特惠：申购NIGHT定期产品，享7天200%年化收益率",
+    "time": "2026-03-25",
+    "releaseDate": 1774413009941,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "269419": {
+    "id": "269419",
+    "code": "8971bf1f7cc64e30a35aebb0006d6e9a",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/8971bf1f7cc64e30a35aebb0006d6e9a",
+    "title": "Impossible Cloud Network交易竞赛：交易Impossible Cloud Network（ICNT），分享10万美元等值奖励",
+    "time": "2026-03-25",
+    "releaseDate": 1774436406454,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "269487": {
+    "id": "269487",
+    "code": "c871cb5293ff4f4085eb4913faf33610",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/c871cb5293ff4f4085eb4913faf33610",
+    "title": "BARD交易量锦标赛：交易瓜分高达3,000,000 BARD奖池",
+    "time": "2026-03-26",
+    "releaseDate": 1774512007718,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "269503": {
+    "id": "269503",
+    "code": "1ba607f354374d4f8d9c67887394ca80",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/1ba607f354374d4f8d9c67887394ca80",
+    "title": "Bluwhale交易竞赛：交易Bluwhale（BLUAI），分享20 万美元等值奖励",
+    "time": "2026-03-26",
+    "releaseDate": 1774522808047,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "269578": {
+    "id": "269578",
+    "code": "bed7e1e7464e4569ad1a8851fd7740ec",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/bed7e1e7464e4569ad1a8851fd7740ec",
+    "title": "XAUT交易量锦标赛：交易瓜分高达200 XAUT奖池",
+    "time": "2026-03-27",
+    "releaseDate": 1774600211676,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "269592": {
+    "id": "269592",
+    "code": "9437de361c8c4ecfbad74842a9931676",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/9437de361c8c4ecfbad74842a9931676",
+    "title": "Audiera交易竞赛：交易Audiera（BEAT），分享20 万美元等值奖励",
+    "time": "2026-03-27",
+    "releaseDate": 1774609205858,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "269635": {
+    "id": "269635",
+    "code": "53f9992190244fae85948661d949be54",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/53f9992190244fae85948661d949be54",
+    "title": "币安理财：申购RLUSD活期产品，前5,000 RLUSD可享最高8%年化收益率（2026-03-30）",
+    "time": "2026-03-30",
+    "releaseDate": 1774843209157,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "269655": {
+    "id": "269655",
+    "code": "39d86ad82df54ddab48588518e435287",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/39d86ad82df54ddab48588518e435287",
+    "title": "币安活期借币和保本赚币活动：申购ETH活期产品即可获得活期借币免息券！",
+    "time": "2026-03-30",
+    "releaseDate": 1774846810727,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "269820": {
+    "id": "269820",
+    "code": "07e6ac67060f4767bc5bdde24bbfc03f",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/07e6ac67060f4767bc5bdde24bbfc03f",
+    "title": "限时福利：新用户参与闪兑&理财活动，瓜分25,000 USDC奖池",
+    "time": "2026-03-31",
+    "releaseDate": 1774915200000,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "269975": {
+    "id": "269975",
+    "code": "d71be6df0c544d799abc9281b7381187",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/d71be6df0c544d799abc9281b7381187",
+    "title": "币安杠杆XAUT交易挑战活动：完成任务关卡，瓜分200,000 USDT奖励！",
+    "time": "2026-03-31",
+    "releaseDate": 1774949408784,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "269980": {
+    "id": "269980",
+    "code": "bc8831c358ae4aa6979ef3c78196258e",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/bc8831c358ae4aa6979ef3c78196258e",
+    "title": "TAO交易量锦标赛：交易瓜分高达1,000 TAO奖池",
+    "time": "2026-03-31",
+    "releaseDate": 1774951213803,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "269994": {
+    "id": "269994",
+    "code": "95596f18a1444f8ba49acc9ce8219e79",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/95596f18a1444f8ba49acc9ce8219e79",
+    "title": "Based交易竞赛：交易Based（BASED），分享20 万美元等值奖励",
+    "time": "2026-03-31",
+    "releaseDate": 1774954811767,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "270007": {
+    "id": "270007",
+    "code": "599c19e39a06492ea401f6f020f88eae",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/599c19e39a06492ea401f6f020f88eae",
+    "title": "为VIP2-9用户、现货及法币做市商推出BTC/JPY、BNB/JPY零手续费活动（2026-04-01）",
+    "time": "2026-03-31",
+    "releaseDate": 1774962012521,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "270026": {
+    "id": "270026",
+    "code": "7ee3440f818a49c198e0e9494429429e",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/7ee3440f818a49c198e0e9494429429e",
+    "title": "币安理财4月挑战赛：申购双币投资，最高可赚取8,888 USDC奖励",
+    "time": "2026-04-01",
+    "releaseDate": 1775008816450,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "270029": {
+    "id": "270029",
+    "code": "08e353752b564eb5b0a494f143e68a5c",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/08e353752b564eb5b0a494f143e68a5c",
+    "title": "币安理财：申购USDC活期产品，享最高5.8%年化收益率",
+    "time": "2026-04-01",
+    "releaseDate": 1775012420663,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "270110": {
+    "id": "270110",
+    "code": "f1e9fd68377e4931b624ac8970ba1c41",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/f1e9fd68377e4931b624ac8970ba1c41",
+    "title": "Perle交易竞赛：交易Perle（PRL），分享20万美元等值奖励",
+    "time": "2026-04-01",
+    "releaseDate": 1775043006226,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "270145": {
+    "id": "270145",
+    "code": "73375089a08d4fc584403eaef5ae50e5",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/73375089a08d4fc584403eaef5ae50e5",
+    "title": "币安月度挑战：完成4月挑战赛，可解锁10万USDC奖池！",
+    "time": "2026-04-02",
+    "releaseDate": 1775095215300,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "270179": {
+    "id": "270179",
+    "code": "82cc6245943544a991166bb291e73200",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/82cc6245943544a991166bb291e73200",
+    "title": "参与现货交易竞赛：交易瓜分高达200,000 U奖池",
+    "time": "2026-04-02",
+    "releaseDate": 1775116820549,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "270408": {
+    "id": "270408",
+    "code": "32efafb3054746d28c82d8023ae52465",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/32efafb3054746d28c82d8023ae52465",
+    "title": "携手币安：邀请好友，共享400,000 美元等值WAL奖励",
+    "time": "2026-04-06",
+    "releaseDate": 1775458721002,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "270434": {
+    "id": "270434",
+    "code": "fc74f82d4d114221a12d9b114456536b",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/fc74f82d4d114221a12d9b114456536b",
+    "title": "币安升级KGST Booster计划：申购KGST活期产品，享最高12%年化收益率（2026-04-07）",
+    "time": "2026-04-06",
+    "releaseDate": 1775462419489,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "270454": {
+    "id": "270454",
+    "code": "586c9ff1b7d1489f8c31a0523517690f",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/586c9ff1b7d1489f8c31a0523517690f",
+    "title": "币安学院比特币专题页面：这四月完成测试赢取BTC奖励！",
+    "time": "2026-04-07",
+    "releaseDate": 1775520000000,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "270676": {
+    "id": "270676",
+    "code": "9aaf058de7d4481b921521df43135af6",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/9aaf058de7d4481b921521df43135af6",
+    "title": "AVNT现货交易竞赛：交易瓜分高达1,600,000 AVNT奖池",
+    "time": "2026-04-08",
+    "releaseDate": 1775638812106,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "270913": {
+    "id": "270913",
+    "code": "160d82e445b6486489058d0c02070fe2",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/160d82e445b6486489058d0c02070fe2",
+    "title": "学习赚币：完成问答，赢取Chainbase (C) 代币奖励！",
+    "time": "2026-04-09",
+    "releaseDate": 1775725262624,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "270942": {
+    "id": "270942",
+    "code": "1b8af58210ce44d0b120bc5a809efa8b",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/1b8af58210ce44d0b120bc5a809efa8b",
+    "title": "TREE交易量锦标赛：交易瓜分高达3,500,000 TREE奖池",
+    "time": "2026-04-09",
+    "releaseDate": 1775727019320,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "270946": {
+    "id": "270946",
+    "code": "99c964d5f1494d0b8822403ca6c92877",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/99c964d5f1494d0b8822403ca6c92877",
+    "title": "RateX交易竞赛：交易RateX（RTX），分享20万美元等值奖励",
+    "time": "2026-04-09",
+    "releaseDate": 1775732400000,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "271004": {
+    "id": "271004",
+    "code": "35509d42de1645c097371c651936f78e",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/35509d42de1645c097371c651936f78e",
+    "title": "币安VIP Capital Connect大师赛：角逐高达30万美元奖励及全球机构资本对接机会",
+    "time": "2026-04-09",
+    "releaseDate": 1775736010198,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "271020": {
+    "id": "271020",
+    "code": "55f57d60bcf841b191379ee3cd25189f",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/55f57d60bcf841b191379ee3cd25189f",
+    "title": "币安理财：申购RWUSD享每日CATI Boost空投奖励，申购CATI活期产品可享最高20%年化收益率",
+    "time": "2026-04-10",
+    "releaseDate": 1775786418874,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "271071": {
+    "id": "271071",
+    "code": "fe2b0d2853004943aba45f2e87a4081c",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/fe2b0d2853004943aba45f2e87a4081c",
+    "title": "币安推出BTC/U零手续费活动（2026-04-17）",
+    "time": "2026-04-10",
+    "releaseDate": 1775811615186,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "271092": {
+    "id": "271092",
+    "code": "956113e442ac4e88be4671124b3cdb68",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/956113e442ac4e88be4671124b3cdb68",
+    "title": "Stable交易竞赛：交易Stable（STABLE），分享10万美元等值奖励",
+    "time": "2026-04-10",
+    "releaseDate": 1775818805661,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "271219": {
+    "id": "271219",
+    "code": "7249f7f6fa274ab4a735609bab682c89",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/7249f7f6fa274ab4a735609bab682c89",
+    "title": "币安理财：申购RLUSD活期产品，前5,000 RLUSD可享最高8%年化收益率（2026-04-14）",
+    "time": "2026-04-14",
+    "releaseDate": 1776142820792,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "271266": {
+    "id": "271266",
+    "code": "111c00b8c5904ae29d97c9d669936d66",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/111c00b8c5904ae29d97c9d669936d66",
+    "title": "币安广场：完成创作者任务台任务，解锁15,000,000 PIXEL代币券奖励！",
+    "time": "2026-04-14",
+    "releaseDate": 1776157212536,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "271305": {
+    "id": "271305",
+    "code": "4dac55c1d95b4e9f942fc39143b175f0",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/4dac55c1d95b4e9f942fc39143b175f0",
+    "title": "币安理财：申购U活期产品，享最高8%年化收益率（2026-04-15）",
+    "time": "2026-04-14",
+    "releaseDate": 1776160808607,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "271446": {
+    "id": "271446",
+    "code": "2b410dc9ef094cbb9c39e96b25720d1e",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/2b410dc9ef094cbb9c39e96b25720d1e",
+    "title": "币安理财：申购折价买币，享最高50%年化收益率",
+    "time": "2026-04-15",
+    "releaseDate": 1776241807736,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "271498": {
+    "id": "271498",
+    "code": "e4447c854c944edba03a1fb307fc9abe",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/e4447c854c944edba03a1fb307fc9abe",
+    "title": "Tria交易竞赛：交易Tria（TRIA），分享20万美元等值奖励",
+    "time": "2026-04-15",
+    "releaseDate": 1776250808904,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "271501": {
+    "id": "271501",
+    "code": "b9e462074a934883b0d36ad8b478a274",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/b9e462074a934883b0d36ad8b478a274",
+    "title": "TON交易量锦标赛：交易瓜分高达400,000 USDC奖池",
+    "time": "2026-04-15",
+    "releaseDate": 1776252634863,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "271538": {
+    "id": "271538",
+    "code": "6622f0b2f37b46ce9009e86e4914d551",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/6622f0b2f37b46ce9009e86e4914d551",
+    "title": "在币安现货、资金、杠杆和合约账户中持有USD1，瓜分1500 万美元等值WLFI奖励（2026-04-17）",
+    "time": "2026-04-16",
+    "releaseDate": 1776301200000,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "271635": {
+    "id": "271635",
+    "code": "a697faab2f6e4216b6cf1ee06debec6e",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/a697faab2f6e4216b6cf1ee06debec6e",
+    "title": "Genius Foundation交易竞赛：交易Genius Foundation（GENIUS），分享20万美元等值奖励",
+    "time": "2026-04-16",
+    "releaseDate": 1776337200000,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "271639": {
+    "id": "271639",
+    "code": "5cfe769110d242f68b1996cf09b15041",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/5cfe769110d242f68b1996cf09b15041",
+    "title": "PLUME交易量锦标赛：交易瓜分高达20,000,000 PLUME奖池",
+    "time": "2026-04-16",
+    "releaseDate": 1776333608690,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "271744": {
+    "id": "271744",
+    "code": "49bca20b219744ac8c92f329ea264769",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/49bca20b219744ac8c92f329ea264769",
+    "title": "SOON交易竞赛：交易SOON（SOON），分享15万美元等值奖励",
+    "time": "2026-04-17",
+    "releaseDate": 1776423612962,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "271923": {
+    "id": "271923",
+    "code": "2291607643f44f50ad6544e9e052d66d",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/2291607643f44f50ad6544e9e052d66d",
+    "title": "Pieverse交易竞赛：交易Pieverse（PIEVERSE），分享10万美元等值奖励",
+    "time": "2026-04-21",
+    "releaseDate": 1776769223110,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "272004": {
+    "id": "272004",
+    "code": "e683874e195e441c9b8568d8994491f2",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/e683874e195e441c9b8568d8994491f2",
+    "title": "黄金vs比特币：选择你的战队，瓜分最高 200,000 美元奖励",
+    "time": "2026-04-22",
+    "releaseDate": 1776823215401,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "272055": {
+    "id": "272055",
+    "code": "afc920d9261141d4b8100aca5445cc65",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/afc920d9261141d4b8100aca5445cc65",
+    "title": "交易Chip（CHIP）：即可瓜分40,000,000 CHIP奖池！",
+    "time": "2026-04-22",
+    "releaseDate": 1776852009817,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "272088": {
+    "id": "272088",
+    "code": "45d18eba4efd40e4b0d8b22ae97ef5a6",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/45d18eba4efd40e4b0d8b22ae97ef5a6",
+    "title": "Janction交易竞赛：交易Janction（JCT），分享10万美元等值奖励",
+    "time": "2026-04-22",
+    "releaseDate": 1776855629659,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "272135": {
+    "id": "272135",
+    "code": "36bda2870aef41ee9ed9b507a9be1132",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/36bda2870aef41ee9ed9b507a9be1132",
+    "title": "交易币安Alpha代币化证券，瓜分150,000 美元等值代币化证券奖励！",
+    "time": "2026-04-23",
+    "releaseDate": 1776931226239,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "272174": {
+    "id": "272174",
+    "code": "93f7a45848624674aecc424f479de66c",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/93f7a45848624674aecc424f479de66c",
+    "title": "VANA交易量锦标赛：交易瓜分高达300 BNB奖池",
+    "time": "2026-04-23",
+    "releaseDate": 1776938410303,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "272255": {
+    "id": "272255",
+    "code": "284add8252634349920b1e0c5f92563d",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/284add8252634349920b1e0c5f92563d",
+    "title": "OpenGradient交易竞赛：交易OpenGradient（OPG），分享20万美元等值奖励",
+    "time": "2026-04-24",
+    "releaseDate": 1777028400000,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "272349": {
+    "id": "272349",
+    "code": "ab57e99e7a824f8faa549f45d0f86d3b",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/ab57e99e7a824f8faa549f45d0f86d3b",
+    "title": "币安理财：申购SHELL活期产品，前150,000 SHELL 可享最高35%年化收益率（2026-04-28）",
+    "time": "2026-04-27",
+    "releaseDate": 1777262417657,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "272442": {
+    "id": "272442",
+    "code": "ad520eedd240425a859c5c6f8be49368",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/ad520eedd240425a859c5c6f8be49368",
+    "title": "币安理财：申购RLUSD活期产品，前2,000 RLUSD可享最高5%年化收益率",
+    "time": "2026-04-28",
+    "releaseDate": 1777345233804,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "272630": {
+    "id": "272630",
+    "code": "a92dcfd80ec2455a84e32a17011273ec",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/a92dcfd80ec2455a84e32a17011273ec",
+    "title": "Perle交易竞赛：交易Perle（PRL），分享20万美元等值奖励（2026-04-28）",
+    "time": "2026-04-28",
+    "releaseDate": 1777374011224,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "272692": {
+    "id": "272692",
+    "code": "686a9950399440a19c73940768b2c92b",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/686a9950399440a19c73940768b2c92b",
+    "title": "币安理财：申购U活期产品，享最高8%年化收益率（2026-04-30）",
+    "time": "2026-04-29",
+    "releaseDate": 1777442407600,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "272764": {
+    "id": "272764",
+    "code": "849cb4ba45f542fca49502dce5930e72",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/849cb4ba45f542fca49502dce5930e72",
+    "title": "Sentio交易竞赛：交易Sentio（ST），分享20万美元等值奖励",
+    "time": "2026-04-29",
+    "releaseDate": 1777460407027,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "272816": {
+    "id": "272816",
+    "code": "7139808b68ca4f498529a1aaec8d39eb",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/7139808b68ca4f498529a1aaec8d39eb",
+    "title": "Score with Binance：球已开赛，守到终场哨响，赢取66 BNB",
+    "time": "2026-04-30",
+    "releaseDate": 1777521620021,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "272875": {
+    "id": "272875",
+    "code": "1f106c50d90143b8a171d56267a35b98",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/1f106c50d90143b8a171d56267a35b98",
+    "title": "币安理财：申购USDC活期产品，享最高5.6%年化收益率（2026-05-01）",
+    "time": "2026-04-30",
+    "releaseDate": 1777537807759,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "272903": {
+    "id": "272903",
+    "code": "1f4d3748796348679d6287d06527bbcc",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/1f4d3748796348679d6287d06527bbcc",
+    "title": "学习赚币：完成问答，赢取Sonic (S) 代币奖励！",
+    "time": "2026-04-30",
+    "releaseDate": 1777539609283,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "273013": {
+    "id": "273013",
+    "code": "2ef9da217b8a4507a33861f4b74795f8",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/2ef9da217b8a4507a33861f4b74795f8",
+    "title": "Acurast交易竞赛：交易Acurast（ACU），分享20万美元等值奖励（2026-04-30）",
+    "time": "2026-04-30",
+    "releaseDate": 1777546809952,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "273063": {
+    "id": "273063",
+    "code": "5695820aac264ca581a495d3fcf39c57",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/5695820aac264ca581a495d3fcf39c57",
+    "title": "币安理财5月挑战赛：申购双币投资，最高可赚取8,888 USDC奖励",
+    "time": "2026-05-04",
+    "releaseDate": 1777863611633,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "273089": {
+    "id": "273089",
+    "code": "d46e5d2d23b74a9190712dee0c2dfeda",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/d46e5d2d23b74a9190712dee0c2dfeda",
+    "title": "币安理财：申购ETH活期产品瓜分4,000万 SOPH奖励！",
+    "time": "2026-05-04",
+    "releaseDate": 1777874413763,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "273248": {
+    "id": "273248",
+    "code": "bfb5df6ee56d4e3aacfb8d8ab348154a",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/bfb5df6ee56d4e3aacfb8d8ab348154a",
+    "title": "加入币安钱包链上交易体验赛，瓜分 60,000 美元等值奖励！",
+    "time": "2026-05-06",
+    "releaseDate": 1778071808524,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "273257": {
+    "id": "273257",
+    "code": "854ba3fda59648799882ff19b5296645",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/854ba3fda59648799882ff19b5296645",
+    "title": "超级返佣迎新礼包升级：为受邀用户提供最高19,800 美元等值奖励！",
+    "time": "2026-05-07",
+    "releaseDate": 1778126400000,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "273260": {
+    "id": "273260",
+    "code": "c82eeb12c91f449db5976e8ba34bc017",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/c82eeb12c91f449db5976e8ba34bc017",
+    "title": "币安活期借币：借入USDT或USDC，瓜分 100 亿PEPE奖励及获得借币免息券！",
+    "time": "2026-05-07",
+    "releaseDate": 1778124621648,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "273352": {
+    "id": "273352",
+    "code": "f7cdedc3f3674af8bb15b67f22a42484",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/f7cdedc3f3674af8bb15b67f22a42484",
+    "title": "NOT交易量锦标赛：交易瓜分高达120,000 USDC奖池",
+    "time": "2026-05-07",
+    "releaseDate": 1778144431841,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
+  "273390": {
+    "id": "273390",
+    "code": "d3258bc7bde244e2befeef920c271aca",
+    "url": "https://www.binance.com/zh-CN/support/announcement/detail/d3258bc7bde244e2befeef920c271aca",
+    "title": "币安学院比特币专题页面：五月完成测试赢取BTC奖励！",
+    "time": "2026-05-08",
+    "releaseDate": 1778198400000,
+    "firstSeen": "2026-05-08",
+    "lastUpdated": "2026-05-08"
+  },
   "d3258bc7bde244e2befeef920c271aca": {
     "id": "d3258bc7bde244e2befeef920c271aca",
     "url": "https://www.binance.com/zh-CN/support/announcement/detail/d3258bc7bde244e2befeef920c271aca",
