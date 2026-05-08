@@ -7,11 +7,11 @@
 | 交易所 | 脚本 | 数据文件 | HTML | 状态 |
 |--------|------|---------|------|------|
 | Gate.io | `scrape_gate.js` | `gate_articles.json` + `gate_knowledge.json` | `gate_2026.html` | ✅ 已上线 |
+| Binance | `scrape_binance.js` | `binance_articles.json` + `binance_knowledge.json` | `binance_2026.html` | ✅ 已上线 |
 
 ## 待完成的交易所
 | 交易所 | 公告页地址 |
 |--------|-----------|
-| **Binance** | https://www.binance.com/zh-CN/support/announcement/list/93 |
 | OKX | https://www.okx.com/zh-hans/help/category/announcements |
 | Bybit | https://announcements.bybit.com/zh-MY/ |
 | KuCoin | https://www.kucoin.com/zh-hant/news/categories/announcement |
@@ -27,10 +27,10 @@ deposit_check/
   gate_articles.json       # Gate.io 全量文章存储（持久化，关键）
   gate_knowledge.json      # Gate.io 人工洞察/badges/简介（人工维护）
   scrape_gate.js           # Gate.io 抓取脚本
-  binance_2026.html        # Binance（待做）
-  binance_articles.json    # Binance 持久化存储（待做）
-  binance_knowledge.json   # Binance 人工洞察（待做）
-  scrape_binance.js        # Binance 抓取脚本（待做）
+  binance_2026.html        # Binance 活动（自动生成，勿手动改）
+  binance_articles.json    # Binance 全量文章存储（持久化，关键）
+  binance_knowledge.json   # Binance 人工洞察/badges/简介（人工维护）
+  scrape_binance.js        # Binance 抓取脚本
   CLAUDE.md                # 本文件
 ```
 
@@ -87,17 +87,43 @@ deposit_check/
 - 所有 CDP 操作通过 curl HTTP API（`/new`、`/eval`、`/scroll`、`/click`、`/close`）
 - 使用用户本机 Chrome（携带登录态、cookies），比 headless 更可靠
 
-## Binance 构建任务（下一步）
-目标公告页：https://www.binance.com/zh-CN/support/announcement/list/93
+## Binance 已验证的抓取方式（2026-05）
+```
+公告列表页：https://www.binance.com/zh-CN/support/announcement/list/93
+抓取方式：内部 API（不用 DOM 解析，速度快，稳定）
+API 端点：/bapi/composite/v1/public/cms/article/list/query
+  参数：type=1, pageNo=N, pageSize=20, catalogId=93
+  Headers: lang=zh-CN, clienttype=web
+  Response: data.catalogs[0].articles → [{id, code, title, releaseDate}]
+  total: 约 1950 条
+注意：
+  - 翻页不可用 DOM click（CDP 环境下 Binance 请求被 block）
+  - 必须通过 CDP tab 调用 API（携带 cookies），直接 curl 无法用
+  - releaseDate 是毫秒时间戳，无阅读量数据
+  - URL 格式：/zh-CN/support/announcement/detail/{code}
+  - 每次抓 5 页 × 20 条 = 100 条（已足够）
+```
 
-构建前需要做的事：
-1. 用 CDP 打开 Binance 公告页，截图看实际结构
-2. 找到活动卡片的 DOM 选择器（标题、时间、URL）
-3. 确认 Binance 是否有阅读量数据（如无，则只抓标题+时间）
-4. 确认分页方式（"加载更多" / 翻页按钮 / 滚动加载）
-5. 参考 scrape_gate.js 的结构写 scrape_binance.js
-6. 分类关键词需要针对 Binance 中文标题调整（Binance 用词风格与 Gate 不同）
-7. 创建 binance_knowledge.json（初始空模板）
+## scrape_binance.js 运行流程
+1. 检查 CDP Proxy（localhost:3456）是否运行
+2. 加载 `binance_knowledge.json` 和 `binance_articles.json`
+3. 打开 Binance 公告页 tab（等待 4s 让 cookie 就绪）
+4. 通过 CDP eval 调用内部 API 抓取 5 页（100 条）
+5. Upsert 到 `binance_articles.json`
+6. 从全量 store 生成 HTML
+7. git add + commit + push → Vercel 自动部署
+
+## Binance 分类规则
+```js
+{ id: 'learn',      re: /学院|答题|完成测试|比特币.*专题|以太坊.*专题/ },
+{ id: 'launchpool', re: /Launchpool|Megadrop|HODLer.*空投|新币.*上线|首发上线|上架/ },
+{ id: 'trade',      re: /锦标赛|交易赛|体验赛|交易大赛|交易量.*竞赛|排行榜/ },
+{ id: 'referral',   re: /邀请|推荐好友|返佣|超级返佣|招募/ },
+{ id: 'newuser',    re: /新用户|首次入金|充值.*奖励|买币.*奖励|迎新|入金礼|注册/ },
+{ id: 'finance',    re: /借币|活期|申购|赚币|理财|质押|Loans|固定利率/ },
+{ id: 'vip',        re: /\bVIP\b|机构用户|做市/ },
+{ id: 'event',      re: /周年|五一|节日|大学生|圣诞|春节|世界杯|Score with/ },
+```
 
 ## 通用 HTML 样式规范
 - 背景 `#0f1117`，侧边栏 `#13151f`，卡片 `#1a1d27`
